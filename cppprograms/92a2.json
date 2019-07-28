@@ -1,0 +1,2204 @@
+{
+    "ConfigGenVersion": "0.1",
+    "ConfigState": "Final",
+    "RpdConfig": {
+        "Data": {
+            "CfgComplete": {
+                "Index": 0,
+                "InitialConfigurationComplete": "True",
+                "MoveToOperational": "True"
+            },
+            "CoreConfig": {
+                "HSDCore": {
+                    "ConfiguredCoreTable": [
+                        {
+                            "ConfiguredCoreIP": "$GCPP_ConfiguredCoreTable_ConfiguredCoreIp$"
+                        }
+                    ]
+                },
+                "principal": {
+                    "CoreFunction": "Principal,Broadcast,55-1",
+                    "CoreId": "$GCPP_CcapCoreIdentification_CoreId$",
+                    "CoreIpAddress": "$GCPP_CcapCoreIdentification_CoreIpAddress$",
+                    "CoreMode": "Active",
+                    "CoreName": "GCPP",
+                    "InitialConfigurationComplete": "False",
+                    "IsPrincipal": "True",
+                    "MoveToOperational": "False",
+                    "PermitAuxSelfConfiguration": "True",
+                    "VendorId": 17270
+                }
+            },
+            "Ds551ChanCfg": {
+                "RfChannel": [
+                    {
+                        "AdminState": "Up",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "Frequency": 75250000,
+                        "PowerAdjust": 3,
+                        "RfChannelIndex": 0,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0
+                    }
+                ],
+                "StaticPwConfig": [
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3c100b000000000000000000000001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 0,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147549169,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 1
+                    }
+                ]
+            },
+            "DsRfPortCfg": [
+                {
+                    "AdminState": "Up",
+                    "BasePower": 336,
+                    "RfMute": "Not Muted",
+                    "RfPortIndex": 0
+                }
+            ],
+            "EvCfg": {
+                "EvControl": [
+                    {
+                        "EvPriority": "emergency",
+                        "EvReporting": "local,notification"
+                    },
+                    {
+                        "EvPriority": "alert",
+                        "EvReporting": "local,notification"
+                    },
+                    {
+                        "EvPriority": "critical",
+                        "EvReporting": "local,notification"
+                    },
+                    {
+                        "EvPriority": "error",
+                        "EvReporting": "local,notification"
+                    },
+                    {
+                        "EvPriority": "warning",
+                        "EvReporting": "local"
+                    },
+                    {
+                        "EvPriority": "notice",
+                        "EvReporting": "local"
+                    },
+                    {
+                        "EvPriority": "information",
+                        "EvReporting": "local"
+                    },
+                    {
+                        "EvPriority": "debug",
+                        "EvReporting": "local"
+                    }
+                ],
+                "EvThrottleAdminstatus": "Unconstrained",
+                "EvThrottleInterval": 0,
+                "EvThrottleThreshold": 0,
+                "NotifyEnable": "Enabled"
+            },
+            "RdtiConfig": [
+                {
+                    "RpdPtpDefDsDomainNumber": 44,
+                    "RpdPtpPortConfig": [
+                        {
+                            "RpdEnetPortIndex": 0,
+                            "RpdPtpPortAdminState": "up",
+                            "RpdPtpPortClockSource": "$GCPP_RdtiConfig_RpdPtpPortClockSource$",
+                            "RpdPtpPortClockSrcGw": "00000000000000000000000000000000",
+                            "RpdPtpPortIndex": 0,
+                            "RpdPtpPortTransportCos": 6,
+                            "RpdPtpPortTransportDscp": 47,
+                            "RpdPtpPortTransportType": "IPv6"
+                        }
+                    ]
+                }
+            ],
+            "RpdDetails": {
+                "RpdIdentification": [
+                    {
+                        "DeviceAlias": "cc38rpd92a2"
+                    }
+                ],
+                "RpdKeepAlive": {
+                    "CoreId": "$GCPP_CcapCoreIdentification_CoreId$",
+                    "MaxGcpIdleTime": 269
+                }
+            },
+            "Ssd": {
+                "SsdControl": "StartSsu",
+                "SsdFilename": "ssdfilename",
+                "SsdManufCvcChain": "1010",
+                "SsdServerAddress": "$GCPP_SsdServerAddress$",
+                "SsdTransport": "HTTP"
+            },
+            "Us551ChanCfg": {
+                "RfChannel": [
+                    {
+                        "AdminState": "Up",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "Frequency": 8096000,
+                        "RfChannelIndex": 0,
+                        "RfPortIndex": 0,
+                        "VarpdDemodId": 1,
+                        "VarpdDeviceId": 1,
+                        "VarpdRfPortId": 1
+                    },
+                    {
+                        "AdminState": "Up",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "Frequency": 9440000,
+                        "RfChannelIndex": 1,
+                        "RfPortIndex": 0,
+                        "VarpdDemodId": 2,
+                        "VarpdDeviceId": 1,
+                        "VarpdRfPortId": 1
+                    },
+                    {
+                        "AdminState": "Up",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "Frequency": 11936000,
+                        "RfChannelIndex": 2,
+                        "RfPortIndex": 0,
+                        "VarpdDemodId": 3,
+                        "VarpdDeviceId": 1,
+                        "VarpdRfPortId": 1
+                    }
+                ],
+                "StaticPwConfig": [
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT-55-1-RET",
+                        "DepiPwSubtype": "MPT-55-1-RET",
+                        "DestAddress": "20010558fe2a02260000000000000201",
+                        "EnableStatusNotification": "Enabled",
+                        "L2Sublayertype": "MPT",
+                        "MtuSize": 1500,
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 0,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 10000,
+                        "StaticPWIndex": 0,
+                        "UsPhbId": 32
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT-55-1-RET",
+                        "DepiPwSubtype": "MPT-55-1-RET",
+                        "DestAddress": "20010558fe2a02260000000000000201",
+                        "EnableStatusNotification": "Enabled",
+                        "L2Sublayertype": "MPT",
+                        "MtuSize": 1500,
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 1,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 10001,
+                        "StaticPWIndex": 1,
+                        "UsPhbId": 32
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT-55-1-RET",
+                        "DepiPwSubtype": "MPT-55-1-RET",
+                        "DestAddress": "20010558fe2a02260000000000000201",
+                        "EnableStatusNotification": "Enabled",
+                        "L2Sublayertype": "MPT",
+                        "MtuSize": 1500,
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 2,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 10002,
+                        "StaticPWIndex": 2,
+                        "UsPhbId": 32
+                    }
+                ]
+            },
+            "UsRfPort": [
+                {
+                    "AdminState": "Up",
+                    "BaseTargetRxPower": 0,
+                    "RfPortIndex": 0
+                }
+            ],
+            "VideoChanCfg": {
+                "RfChannel": [
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 57000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 51,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 63000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 52,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 69000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 53,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 79000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 54,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 85000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 55,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 129000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 62,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 135000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 63,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 141000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 64,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 147000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 65,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 153000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 66,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 159000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 67,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 165000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 68,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 171000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 69,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 177000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 70,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 183000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 71,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 189000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 72,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 195000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 73,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 201000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 74,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 207000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 75,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 213000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 76,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 219000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 77,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 225000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 78,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 231000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 79,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 237000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 80,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 243000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 81,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 249000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 82,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 255000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 83,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 261000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 84,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 267000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 85,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 273000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 86,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 279000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 87,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 285000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 88,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 291000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 89,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 297000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 90,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 303000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 91,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 309000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 92,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 315000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 93,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 321000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 94,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 327000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 95,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 333000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 96,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 339000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 97,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 345000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 98,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 351000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 99,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 357000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 100,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 363000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 101,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 369000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 102,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 375000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 103,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 381000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 104,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 387000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 105,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 393000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 106,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 399000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 107,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 405000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 108,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 411000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 109,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 573000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 136,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 579000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 137,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 585000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 138,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    },
+                    {
+                        "AdminState": "Up",
+                        "Annex": "Annex B",
+                        "CcapCoreOwner": "$GCPP_CcapCoreOwner$",
+                        "CenterFrequency": 591000000,
+                        "InterleaverDepth": "Taps128Increment1",
+                        "Modulation": "Qam256",
+                        "OperationalMode": "Synchronous MPEG",
+                        "PowerAdjust": 0,
+                        "RfChannelIndex": 139,
+                        "RfMute": "Not Muted",
+                        "RfPortIndex": 0,
+                        "SyncInterval": 0
+                    }
+                ],
+                "StaticPwConfig": [
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 51,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528704,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 51
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 52,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528705,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 52
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 53,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528706,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 53
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 54,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528707,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 54
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 55,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528708,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 55
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 62,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528709,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 62
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 63,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528710,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 63
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 64,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528711,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 64
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 65,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528712,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 65
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 66,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528713,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 66
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 67,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528714,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 67
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 68,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528715,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 68
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 69,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528716,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 69
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 70,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528717,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 70
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 71,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528718,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 71
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 72,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528719,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 72
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 73,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528720,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 73
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 74,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528721,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 74
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 75,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528722,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 75
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 76,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528723,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 76
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 77,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528724,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 77
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 78,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528725,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 78
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 79,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528726,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 79
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 80,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528727,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 80
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 81,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528728,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 81
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 82,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528729,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 82
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 83,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528730,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 83
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 84,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528731,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 84
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 85,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528732,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 85
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 86,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528733,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 86
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 87,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528734,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 87
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 88,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528735,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 88
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 89,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528736,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 89
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 90,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528737,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 90
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 91,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528738,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 91
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 92,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528739,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 92
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 93,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528740,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 93
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 94,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528741,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 94
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 95,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528742,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 95
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 96,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528743,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 96
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 97,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528744,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 97
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 98,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528745,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 98
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 99,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528746,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 99
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 100,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528747,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 100
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 101,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528748,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 101
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 102,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528749,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 102
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 103,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528750,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 103
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 104,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528751,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 104
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 105,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528752,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 105
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 106,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528753,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 106
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 107,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528754,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 107
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 108,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528755,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 108
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "ff3bfeed000000000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 109,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147528756,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 109
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "FF3AFEED001A00000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 136,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147486208,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 136
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "FF3AFEED001A00000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 137,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147486209,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 137
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "FF3AFEED001B00000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 138,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147486464,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 138
+                    },
+                    {
+                        "CcapOwner": "$GCPP_CcapCoreOwner$",
+                        "CircuitStatus": "8000",
+                        "DepiL2SublayerSubtype": "MPT DEPI",
+                        "DepiPwSubtype": "MPT DEPI",
+                        "EnableStatusNotification": "Enabled",
+                        "GroupAddress": "FF3AFEED001B00000000000000100001",
+                        "L2Sublayertype": "MPT",
+                        "PwType": "MPT",
+                        "RFChannelMap": [
+                            {
+                                "RFChannelIndex": 139,
+                                "RFPort": 0
+                            }
+                        ],
+                        "RpdEnetPortIndex": 0,
+                        "SessionId": 2147486465,
+                        "SourceAddress": "00000000000000000000000000000000",
+                        "StaticPWIndex": 139
+                    }
+                ]
+            }
+        },
+        "RpdMacAddress": "0020a32492a2"
+    },
+    "SshKey": "ssh-rsaAAAAB3NzaC1yc2EAAAADAQABAAACAQDCjmMQzqSWPnCHCHOfDQm6j8L4BrIpew6knZ/3zUUFWNnyKESlL/kZcfizvRu273pHSF+n73OMRRApAXawhq2rHW6/SyVIWVHh8uu0kUipqiMGiVP7mYtZVZxTAXTX4Yao5SWsrUC3lcao7jE2cjxBdmIWae53dCjOmchC5GmqxES6d+t8VHmFWpy04a8T+1nT5KGL+2IoAgwcoICctgSynuCNQvbMRthtSqywHeQH9oBjy1a3Df+QaCaVQiWSkncduvGDnJXSOtk6RDK0gLLeZ4GPSuCM/NJfSiUyTSkd+YfOFqcJqwttJI6zVu2Q8UlvFEjzYplZ56XoC/FYVt1Sw7yCUoo6qEv0BC1rer+Em1pMBsFP7Z6igfSHfqk1QRkhJLl1+OkxbtwfnOB5W8wgQozQHcnZMNWURdiA5XXmVIoUhRgHHXAYTPQ3Z+V/i1bymh8hQNSAxvJbu5f3lb8yeQb0w56BwHqAfknA+oMdxR7DpYMR/2/9OBszZYPZtaDuM8bw8RHG3kS4F0V9TW5Aw6y8q3v4GoDnHWyj+uy2wpI8fuBem+WYXdwIiDeipkMuqU/uStn+n7s7EMVFVfu52RLAFIuRiQUWa4xqtozNZq3PdcQeb0uj1i+fdFasPJyTocmI0rXOadGO8xzbpq4lmlTpS+XskGdESc0nQWcHuw==senthil_kumar@comcast.com"
+}

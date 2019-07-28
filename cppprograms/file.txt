@@ -1,0 +1,761 @@
+EDSRes: 
+TransactionIdentifier: 0
+ProtocolIdentifier: 1
+Length: 3740
+UnitIdentifier: 0
+MessageId: 7
+MessageLength: 3736
+TransactionId: 32242
+Mode: 0
+Port: 0
+Channel: 0
+VendorId: 4491
+VendorIndex: 1
+REX: 
+: 
+Sequence: 
+: 
+SequenceNumber: 0
+Operation: ReadResponse
+ResponseCode: NoError
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 51
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003201
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 52
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003201
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 53
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003201
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 54
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003201
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 55
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 62
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 63
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 64
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 65
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 66
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 67
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 68
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 69
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 70
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 71
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 72
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 73
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 74
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 75
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 76
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 77
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 78
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 79
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 80
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 81
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 82
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 83
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 84
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 85
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 86
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 87
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 88
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 89
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 90
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 91
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 92
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 93
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 94
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 95
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 96
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 97
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 98
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 99
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 100
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 101
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 102
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 103
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 104
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 105
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 106
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 107
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 108
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 109
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 136
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 137
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 138
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
+RfChannel: 
+: 
+RfChannelSelector: 
+: 
+RfPortIndex: 0
+RfChannelType: DsScQam
+RfChannelIndex: 139
+DsScQamChannelPerf: 
+: 
+outDiscards: 0000000000000000
+outErrors: 0000000000000000
+outPackets: 0000000000000000
+discontinuityTime: 07e2081503003202
