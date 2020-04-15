@@ -17,15 +17,22 @@ int main(){
 
  // map<int,string> mp1; //or map<int,string,std::less<int>>
   map<int,string,std::less<int>> mp1;
+ // map<int,string,std::less<int>> mp2;
 
   mp1.insert(make_pair(4,"shankar"));
   mp1.insert(make_pair(2,"krishna"));
+
+  map<int,string,std::less<int>> mp2(mp1.begin(),mp1.end());
+
   mp1[5] = "deva";
   mp1.insert(std::pair<int,string>(3, "god"));
   mp1[1] = "shak";
   mp1[1] = "shakti";
 
+  cout << "size of mp1" << mp1.size() << "size of mp2" << mp2.size() << endl;
+
   displaymapelements(mp1);
+  displaymapelements(mp2);
 
   return 0;
 
