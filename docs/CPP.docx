@@ -1,0 +1,3201 @@
+1)	Reading the multiple inputs 
+               cin >> a >> b >>c;
+       2)  Setting the precision while printing the double value
+           double d;
+           cout << "Geeks" << endl;
+           cin >> d;
+           cout.precision(<precisionvalue>);
+           cout << d;
+ 
+       3) Templates -- 2 types of templates, 1 one is function templates.
+                                                                    2nd one is class template.
+ 
+       4) Predefined  Macros:
+ 
+The following macro names are always defined (they all begin and end with two underscore characters, _):
+ 
+ 
+macro	value
+__LINE__	Integer value representing the `rrent line in the source code file being compiled.
+__FILE__	A string literal containing the presumed name of the source file being compiled.
+__DATE__	A string literal in the form "Mmm dd yyyy" containing the date in which the compilation process began.
+__TIME__	A string literal in the form "hh:mm:ss" containing the time at which the compilation process began.
+__cplusplus	An integer value. All C++ compilers have this constant defined to some value. Its value depends on the version of the standard supported by the compiler:
+•	199711L: ISO C++ 1998/2003
+•	201103L: ISO C++ 2011
+Non conforming compilers define this constant as some value at most five digits long. Note that many compilers are not fully conforming and thus will have this constant defined as neither of the values above.
+__STDC_HOSTED__	1 if the implementation is a hosted implementation (with all standard headers available)
+0 otherwise.
+             The following macros are optionally defined, generally depending on whether a feature is available:
+ 
+ 
+macro	value
+__STDC__	In C: if defined to 1, the implementation conforms to the C standard.
+In C++: Implementation defined.
+__STDC_VERSION__	In C:
+•	199401L: ISO C 1990, Ammendment 1
+•	199901L: ISO C 1999
+•	201112L: ISO C 2011
+In C++: Implementation defined.
+__STDC_MB_MIGHT_NEQ_WC__	1 if multibyte encoding might give a character a different value in character literals
+__STDC_ISO_10646__	A value in the form yyyymmL, specifying the date of the Unicode standard followed by the encoding of wchar_t characters
+__STDCPP_STRICT_POINTER_SAFETY__	1 if the implementation has strict pointer safety (see get_pointer_safety)
+
+__STDCPP_THREADS__	1 if the program can have more than one thread
+Particular implementations may define additional constants.
+ 
+For example:
+ 
+ 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13	// standard macro names
+#include <iostream>
+using namespace std;
+int main()
+{
+  cout << "This is the line number " << __LINE__;
+  cout << " of file " << __FILE__ << ".\n";
+  cout << "Its compilation began " << __DATE__;
+  cout << " at " << __TIME__ << ".\n";
+  cout << "The compiler gives a __cplusplus value of " << __cplusplus;
+  return 0;
+}	This is the line number 7 of file /home/jay/stdmacronames.cpp.
+Its compilation began Nov  1 2005 at 10:12:29.
+The compiler gives a __cplusplus value of 1
+ 
+ 
+1.	Include a local file can be done as    #include "file.h"
+2.	Include a library can be done as #include "file"
+3.	Compiling a code(.cpp or .h file) without main    use -c option // Ex: g++ -c Vir.cpp, without -c it will give error.
+
+Data Types: in C++:
+
+  cout << "size of bool: " << sizeof(bool) << endl;
+    cout << "size of char: " << sizeof(char) << endl;
+    cout << "size of unsigned short int: " << sizeof(unsigned short) << endl;
+    cout << "size of  short int: " << sizeof(short) << endl;
+    cout << "size of unsigned long int: " << sizeof(unsigned long) << endl;
+    cout << "size of long : " << sizeof(long) << endl;
+    cout << "size of int : " << sizeof(int) << endl;
+    cout << "size of unsigned int : " << sizeof(unsigned int) << endl;
+    cout << "size of unsigned long long : " << sizeof(unsigned long long) << endl;
+    cout << "size of long long : " << sizeof(long long) << endl;
+    
+    cout << "size of float : " << sizeof(float) << endl;
+    cout << "size of double : " << sizeof(double) << endl;
+
+
+size of bool: 1
+size of char: 1
+size of unsigned short int: 2
+size of  short int: 2
+size of unsigned long int: 8
+size of long : 8
+size of int : 4
+size of unsigned int : 4
+size of unsigned long long : 8
+size of long long : 8
+size of float : 4
+size of double : 8
+
+4.	“auto” key word is introduced in the C++11, type of the variable is apparent given the value initialization value its being assigned ,
+Auto requires to initialize the variable for the compiler.
+
+Ex: auto Flag = true; //here compiler check the initialization value and it finds it as best suits for bool. 
+
+Ex:
+         Auto flag = true;
+         Auto Number = 250000000000;
+         Cout << “size of” << flag << endl; //1 (as compiler derives it as bool)
+           Cout << “size of” << Number << endl; // 8 (as compiler derives it as long)
+
+5.	Defining constants:
+
+a)	Using preprocessor  directives( #define pi 3.1122)
+b)	Using Literal constants (int  a = 0;)
+c)	Declared constants using the key word const.
+d)	Constant expressions using the constexpr keyword (new to C++11) 
+e)	Enumerated constants using the enum keyword
+f)	Defined constants that are not recommended and deprecated.
+
+Const expression:
+
+a)	The difference b/w the const and constexpr is very little
+               
+                   Constexpr double GetPi() {return 22.0/7;};
+
+                   Constexpr double TwicePi()  {return 2* GetPi();};
+
+
+Enumerated Data Types:
+
+When declaring an enumerated constant, the compiler converts the enumerated values such as each one into integers. 
+
+
+
+
+Each enumerated value is specified is one more than the previous value. You have the choice of specifying the starting value, if this is not specified, compiler takes it as 0. If you want you can also explicitly specify value against each of the enumerated constants by initializing thems.
+
+Ex:
+
+Enum Colors {
+    Violet = 0,
+     Pink,
+     Red,
+     Blue, 
+     Green
+} //Here compiler will automatically assignment incrementing values from pink
+
+Enum Colors {
+    Violet = 21,
+     Pink,              //automatically 22
+     Red,               //automatically 23
+     Blue, 
+     Green
+}
+
+
+
+
+
+Virtual Function:
+ 
+ 
+It’s a member function declared  in the base class and is redefined by derived class.           
+ 
+ a) They are must public.
+ b) They cannot be static or friend function of  other class.
+ c) They should be accessed using a pointer or reference of base class type(in the derived function) to achieve run time polymorphism.
+ 
+Ex:
+ 
+// virtual members
+#include <iostream>
+using namespace std;
+class Polygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area ()
+      { return 0; }
+};
+class Rectangle: public Polygon {
+  public:
+    int area ()
+      { return width * height; }
+};
+class Triangle: public Polygon {
+  public:
+    int area ()
+      { return (width * height / 2); }
+};
+int main () {
+  Rectangle rect;
+  Triangle trgl;
+  Polygon poly;
+  Polygon * ppoly1 = &rect;
+  Polygon * ppoly2 = &trgl;
+  Polygon * ppoly3 = &poly;
+  ppoly1->set_values (4,5);
+  ppoly2->set_values (4,5);
+  ppoly3->set_values (4,5);
+  cout << ppoly1->area() << '\n';
+  cout << ppoly2->area() << '\n';
+  cout << ppoly3->area() << '\n';
+  return 0;
+}
+ 
+From <http://www.cplusplus.com/doc/tutorial/polymorphism/> 
+ 
+ 
+Abstract Classes:
+ 
+Abstract base classes are something very similar to the Polygon class in the previous example. They are classes that can only be used as base classes, and thus are allowed to have virtual member functions without definition (known as pure virtual functions). The syntax is to replace their definition by =0 (an equal sign and a zero):
+ 
+Ex:
+ 
+// abstract class CPolygon
+class Polygon {
+  protected:
+    int width, height;
+  public:
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area () =0; //Here it is a Pure Virtual Fucntion:
+};
+ 
+Classes that contain at least one pure virtual function are known as abstract base classes.
+ 
+Abstract base classes cannot be used to instantiate objects. Therefore, this last abstract base class version of Polygon could not be used to declare objects like:
+ 
+Polygon mypolygon;
+ 
+But an abstract base class is not totally useless. It can be used to create pointers to it, and take advantage of all its polymorphic abilities. For example, the following pointer declarations would be valid:
+ 
+ 
+1
+2	Polygon * ppoly1;
+Polygon * ppoly2;
+ 
+From <http://www.cplusplus.com/doc/tutorial/polymorphism/> 
+ 
+Note: When deriving  a struct  from a Struct/class, the default access specifier for a base class/Struct is public. And when deriving a class, the default access specifier is private.  That’s use the Struct always:
+ 
+Struct A {
+ 
+Public:
+  int a , b;
+  int area{
+   return a*b
+  }
+}
+ 
+Struct B : A {};
+ 
+Int main(){
+   B b;
+   b.a = 10;
+   getchar();
+   return 0;
+}
+ 
+ 
+Shared Pointer or Smart Pointer:   template < class T> class 
+ 
+    a) Manages the storage of a pointer, provides a limited storage garbage collection facility. Possibly sharing the management with other objects.
+ 
+a.	Objects of shared_ptr have the ability of taking owner ship of a pointer and share that ownership, once they take ownership, the group of owners become responsible for its deletion when last one of them releases the ownership.
+b.	The shared_ptr objects release ownership on the object they co-own as soon as they themselves are destroyed or as soon as their value changes either by assignment operation or by an explicit call to the shared_ptr::reset.
+c.	Once all the shared_ptr objects that share ownership over a pointer have released this ownership, managed object is deleted (normally by calling ::delete , but may be different deleter may be specified  on construction).
+d.	The shared_ptr objects only share ownership by copying their value, If two shared_ptr are constructed (or made) from the same (non-shared_ptr) pointer, they will both be owning the pointer without sharing it, causing potential access problems when one of them releases it (deleting its managed object) and leaving the other pointing to an invalid location.
+e.	Additionally, shared_ptr objects can share ownership over a pointer while at the same time pointing to another object. This ability is known as aliasing (see constructors), and is commonly used to point to member objects while owning the object they belong to. Because of this, a shared_ptr may relate to two pointers:
+•	A stored pointer, which is the pointer it is said to point to, and the one it dereferences with operator*.
+•	An owned pointer (possibly shared), which is the pointer the ownership group is in charge of deleting at some point, and for which it counts as a use.
+f.	A shared_ptr that does not own any pointer is called an empty shared_ptr. A shared_ptr that points to no object is called a null shared_ptr and shall not be dereferenced. Notice though that an empty shared_ptr is not necessarily a nullshared_ptr, and a null shared_ptr is not necessarily an empty shared_ptr.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructors:
+ 
+1.	Special member method.
+2.	Invoked during the object creation.
+3.	Useful for initialization of the varialbes
+4.	Same name as class name
+5.	No return type is specified.
+6.	Can be overloaded.
+ 
+Ex:
+ 
+Class Player {
+  private:
+    std::string name;
+    int age;
+    int xp;
+ 
+ public:
+//Overloaded Constructors.
+  Player(); //No Arg constructor
+  Player(std::string na, int a);
+  Player(std::string na, int a, int x);
+  Player(double age);
+  Player(doube age, std::string name);
+~Player(); //Destructor.
+ 
+}
+ 
+Destructors:
+ 
+1.	Special member method.
+2.	Same name as class name with a tilde beginning( ~)
+3.	Invoked automatically when an object is destroyed (Compiler calls the destructor automatically).
+4.	No return type and No parameters.
+5.	Only one destructor per class is allowed, -- Cannot be overloaded.
+6.	Useful to release memory and other resources( like uninitializing variables and files closing)
+ 
+Destructor will be called when a local object goes out of scope, or when we delete a pointer to an object.
+ 
+ 
+//Creating of objects:
+ 
+{
+  Player p1; //default constr.
+  Player p2 {"shankar", 29};
+  Player p3 {"madhavi", 29, 2};
+} // As the objects goes out of scope, destructors will be called automatically.
+ 
+Player *p4 = new Player {2.0};
+delete p4; //Destructor is called.
+ 
+ 
+If a user does not provide any constructor or destructor , Compiler will provide a default constructor and default destructor.
+ 
+-> when an object is created for a class, Copy constructor is also called.
+ 
+--> If an Args constructor is already present in the class, compiler won't create any default constructor. If we try creating an object with default constuctor , compiler will throw an error.
+ 
+ 
+Constructor Initialization List:
+ 
+a.	using the initialization list, members are created and initialized only once, with given value.
+b.	Using the assignment , members are initialized with a default value, then reassigned in the constructor body.
+ 
+In some cases(  constants and references), you can only use initialization lists because:
+ 
+  a) these must be initialized with a valid value.
+  b) Once they are constructed, reassigning them is illegal.
+ 
+class A::A() 
+    : a(0), b(0), c(0) 
+{ 
+}
+class A::A() 
+{ 
+    a = 0 
+    b = 0; 
+    c = 0; 
+}
+ 
+ 
+ 
+Delegation of Constructors:
+ 
+1.	Often code for the constructors are very similar.
+2.	Duplicated code can lead to errors
+3.	C++ allows delegating of constructors
+          a) Code for one constructor can call another in the initialization list.
+          b) Avoid duplicating code.
+ 
+ 
+Default Constructor parameters:
+ 
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+class Player{
+ private:
+   string name;
+   int age;
+   int exp;
+ public:
+   Player(string s = "None" , int n = 0, int e = 0);
+};
+ 
+Player::Player(string n, int a, int e):name(n),age(a),exp(e){
+  cout << "three arg constr. is called" << endl;
+  cout << "values are " << "name: " << n << "  age:" << a << " exp:" << e << endl;
+};
+ 
+int main(){
+ 
+  Player p1;
+  Player p2("madhavi");
+  Player p3("shan", 10);
+  Player p4("unknown", 34, 37);
+ 
+  return 0;
+ 
+}
+ 
+Copy Constructor:
+ 
+When objects are copied , c++ must create a new object from an existing object
+ 
+When a copy of an object is created:
+ 
+a.	Passing an object by value as a parameter
+b.	Returning an object from a function by value.
+c.	Constructing an object based on another object of same class.
+ 
+ 
+If we don’t define the copy constuctor c++ compiler will create a copy constructor.
+ 
+Copies the value of each data member, to the new object.
+ 
+Beware if there is a pointer data member:
+ 
+1.	Pointer will be copied.
+2.	Not what is pointing to .
+3.	Shall vs Deep.
+ 
+Best Practices:
+ 
+1.	Provide a copy constrctor when your class has a raw pointer members.
+   2)    Provide copy constructor with a const reference member.
+3.	Use STL classes as they provide the copy constructors already.
+4.	Avoid using the raw pointer data members if possible.
+ 
+Ex:
+ 
+Defining copy constructor.
+ 
+Player::Player(const Player &source);
+Account::Account(const Account &source);
+ 
+Implementation of copy constructor:
+ 
+Player::Player(const Player &source)
+  //Either create a new object or use initialization list
+  : name(source.name), age(source.age), exp(source.exp){
+ 
+ }
+ 
+Player::Player(const Player &source)
+    : name{source.name} ,age{source.age}, exp{source.exp}{
+ 
+ }
+ 
+Pass an object by value:
+ 
+Ex: 
+ 
+Player p1{"shankar", 10,20};
+ 
+Void display(Player p2){
+ 
+ }
+ 
+display(p1);
+ 
+Returning an Object from a function:
+ 
+Player enemy;
+ 
+Player create_new_player(){
+ Player p2{"madhavi", 30, 0};
+ return p2;
+}
+ 
+enemy = create_new_player();
+ 
+Creating a new object based on existing object of same class:
+ 
+Player p3 {"sachin", 45, 20};
+Player p4 = p3; or Player p4 {p3};
+ 
+Shallow Copy:
+ 
+Default copy constructor:
+ 
+ a) Do memberwise copy.
+ b) Each data member is copied from source object.
+ c) the pointer is copied, but not what it points to (shallow copy)
+ 
+Problem: When we release the storage in the constructor, the other object still refers to the release storage;
+ 
+Deep Copy: (create new storage and copy values)
+ 
+Deep::Deep(const Deep &source){
+ 
+  data = new int;
+  *data = *source.data;
+   cout << "copy constuctor -- deep" << endl;
+ 
+}
+ 
+Deep::Deep(const Deep &source)
+   : Deep(*source.data){
+  cout << "deep copy constructor delegrate is called" << endl;
+}
+ 
+Move Construtors:
+ 
+a.	Some times copy constructors are called, many times automatically due to copy semantics in c++
+b.	Copy constructors doing the deep copying have a significant performance bottle neck.
+c.	C++11 introduced move semantics, and move constructors.
+d.	Move constructor moves an object rather than copy it.
+e.	Optional  but recommended when you have a raw poniter.
+f.	Copy elision, -- C++ may optimize copying away completely (RVO -- Return Value Optimization)
+ 
+ 
+Rvalue References:
+ 
+a.	Used in move semantics and perfect forwarding
+b.	Move semantics is all about r-value references.
+c.	Used by move constructor and move assignment operator to efficiently move an object rather than copy.
+    d)   R value references operator (&&)
+ 
+Ex:
+ 
+Int x {100}; 
+ 
+Int &l = x; //  l is l value reference.
+ 
+L = 10; // change x to 10;
+ 
+Int &&r = 200; //r value reference
+R = 300; // change r 300
+ 
+Int &&x_ref = x; //Compiler error
+ 
+L-Value reference parameter:
+ 
+Int x {100}; // x is an l value
+ 
+Void func(int &x) ; //A
+ 
+Func(x); 
+Fucn(200);  //Error 200 is an r- value
+ 
+Error:  cannot bind non-const lvalue reference of type int & to an rvalue reference of type int.
+ 
+ 
+R-Value references parameters:
+ 
+Int x {100};
+ 
+Void func(int &&a);
+Func(200);
+Func (x); //x is an l-value
+ 
+ 
+Error: Cannot bind r value reference of type int && to an lvalue of type int.
+ 
+Combined solution:
+ 
+Int x  {100};
+ Func(int &a);
+ Func( int &&a);
+ 
+ //calling func
+ 
+  Func(x);
+  Func(200);
+ 
+ 
+When you first learn about them, move semantics and perfect forwarding seem pretty straightforward:
+ 
+ • Move semantics makes it possible for compilers to replace expensive copying operations with less expensive moves. In the same way that copy constructors and copy assignment operators give you control over what it means to copy objects, move constructors and move assignment operators offer control over the semantics of moving. Move semantics also enables the creation of move-only types, such as std::unique_ptr, std::future, and std::thread.
+ 
+ • Perfect forwarding makes it possible to write function templates that take arbi‐ trary arguments and forward them to other functions such that the target func‐ tions receive exactly the same arguments as were passed to the forwarding functions. Rvalue references are the glue that ties these two rather disparate features together.
+ 
+Rvalue references are the glue that ties these two rather disparate features together. They’re the underlying language mechanism that makes both move semantics and perfect forwarding possible:
+ 
+template // in namespace std 
+typename remove_reference::type&& 
+move(T&& param) {
+ using ReturnType = typename remove_reference::type&&; //   // alias declaration  see Item 9
+ return static_cast(param); } 
+ 
+ 
+std::move and std::forward are merely functions (actually function templates) that perform casts. std::move unconditionally casts its argument to an rvalue, while std::forward performs this cast only if a particular condition is fulfilled. That’s it
+
+ 
+ 
+ 
+Copy Constructor:  Copy constructor is a special constructor for class/struct used to create a copy of an existing instance , copy constructor syntax is one of the following, for example for Myclass:
+ 
+a.	Myclass(const Myclass& other)
+b.	Myclass(Myclass & other)
+c.	Myclass(volatile const Myclass & other)
+d.	Myclass(volatile Myclass& other)
+ 
+ Note: Below constructors also do same thing as the copy constructors, but they are not copy constructors:
+    
+    a) Myclass(Myclass* other)
+    b) Myclass(const Myclass* other)
+ 
+ Note: If we don’t create a copy constructor, Compiler creates a copy constructor implicitly. For example below:
+ 
+     Myclass {
+        public:
+           int a;
+           float b;
+          std::string s;
+    }
+ 
+The compiler provided copy constructor is exactly equivalent to:
+ 
+Myclass::Myclass(Myclass& other):
+   a (other.a), b(other.b), s(other.s)
+{}
+ 
+There are certain circumstances where like above member copy is not sufficient. By far, most common reason the default copy constructor is not sufficient is because the Object contains raw pointers and you need to take a Deep copy of the pointer, i.e you don’t copy the constructor, rather you have to copy the what pointer points to. 
+ 
+Why do you need deep copy, because the instance owns the pointer, because instance is responsible for calling the delete on the pointer at the same point(at destructor). If 2 objects end up calling delete on the same non-Null pointer, heap corruption results.
+ 
+ 
+Rarely you will come across a class that does not contain raw
+pointers yet the default copy constructor is not sufficient.
+An example of this is when you have a reference-counted object.
+boost::shared_ptr<> is example.
+ 
+ 
+Const Correctness: When passing parameters by references to a functions or constructor as arguments. Pass by non-const  reference only
+If the function will modify the parameter and it is the intent to change the caller's copy of the data, otherwise pass by const reference.
+ 
+Why is this so important? There is a small clause in the C++ standard that says that non-const references cannot bind to temporary objects.
+A temporary object is an instance of an object that does not have a variable name. For example:
+ 
+Temporary object ex:              std::string("Hello World") //No variable name is declared.
+ 
+Non temporary object:           std::string s("Hello World")
+ 
+Ex:
+ 
+ // Improperly declared function:  parameter should be const reference:
+  void print_me_bad( std::string& s ) {
+      std::cout << s << std::endl;
+  }
+// Properly declared function: function has no intent to modify s:
+  void print_me_good( const std::string& s ) {
+      std::cout << s << std::endl;
+  }
+ 
+std::string hello( "Hello" );
+print_me_bad( hello );  // Compiles ok; hello is not a temporary
+print_me_bad( std::string( "World" ) );  // Compile error; temporary object
+print_me_bad( "!" ); // Compile error; compiler wants to construct temporary
+                       // std::string from const char*
+print_me_good( hello ); // Compiles ok
+print_me_good( std::string( "World" ) ); // Compiles ok
+print_me_good( "!" ); // Compiles ok 
+ 
+ 
+Note: Many of the STL containers and algorithms require that an object
+be copyable. Typically, this means that you need to have the
+copy constructor that takes a const reference, for the above
+reasons.
+ 
+Assignment Operator Overloading:
+ 
+if you do not declare an assignment operator, the compiler gives you one implicitly. 
+The implicit assignment operator does member-wise assignment of  each data member from the source object. For example, using the class above, the compiler-provided assignment operator is exactly equivalent to:
+ 
+ MyClass& MyClass::operator=( const MyClass& other ) {
+      x = other.x;
+      c = other.c;
+      s = other.s;
+      return *this;
+  }
+ 
+In general, any time you need to write your own custom copy  constructor, you also need to write a custom assignment operator.
+
+Operator Overloading:
+ 
+1.	Compiler provides a default "assignment(=)" operator overloading, not for any other operator.
+2.	 
+3.	The Majority of the c++ operators can be overloaded , except the below:
+:: (Scope operator)
+.*
+:?
+.
+Sizeof
+ 
+ 
+Assignment Operator Overloading: (=)
+ 
+1.	C++ Provides a default assignment operator used for assigning one object to another object, it means it provides a "Shallow Copy"
+ 
+MyString ms1 {"Frank"};
+MyString ms2 = ms1 // It’s not assignment , here Copy constructor is called. //its same as  "MyString ms2{ms1};"
+MyString ms3;
+ 
+Ms3 = ms1; //Here Assignment operator.
+ 
+Example:
+ 
+class MyString{
+private:
+    char *s;
+ public:
+ 
+    MyString();
+    MyString(const char* s1);
+    MyString(const MyString& source);
+    void display() const;
+    int get_length() const;
+    const char* get_str() const;
+    ~MyString();
+ 
+};
+ 
+ 
+2.	If we have raw pointer data member we must do deep Copy.
+3.	Overloading Copy Assignment Operator (deep copy):
+ 
+Syntax:
+ 
+Type &Type::operator=(const Type &rhs);
+ 
+MyString &MyString::operator=(const MyString &rhs);
+ 
+S2 = s1;
+ 
+S2.operator=(s1); //operator=  method is called.
+S2 = "shankar"; //Temporary object is created and copy assigment operator is called.
+ 
+4.	Example for the above class: (Deep Copy): Copy Assigment
+ 
+              MyString &MyString::operator=(const MyString& rhs){
+ 
+                   if(this = &rhs){ //Check for Self assignment for the cases like p1 = p1;
+                       return *this;
+                    };
+                   delete[] s; //Deallocate Storage for this->s  "since we are overriding it";
+ 
+                    s = new char[ strlen(rhs.s) +1]; //Allocate Storage for new data memeber
+                    strcpy(s,rhs.s);
+ 
+                    return *this;
+                }
+ 
+      5) Move Assignment Operator Overloading, (move assignment operator =)
+  
+           a) You can chose to overload the move assignment operator
+           b) C++ uses the copy assignment operator if necessary
+           
+           MyString s1;
+            s1 = MyString {"MoveCopyconstructor"};
+ 
+            Mystring s2 {"infosys limited"};
+            MyString s3 = std::move(s1); //Move constructor is called.
+ 
+           c) If we have raw pointer, we should overload the move assignment operator for efficiency. 
+ 
+           Syntax :
+                  MyString s1;
+                  Type &Type::operator=(Type &&rhs) ;
+                   s1 = MyString("MoveAssignment");  Move operator= is called
+                   s1 = "Frank";  //Move operator= is called.
+ 
+          
+                 MyString &MyString::operator=(const MyString&& rhs){
+ 
+                   if(this = &rhs){ //Check for Self assignment for the cases like p1 = p1;
+                       return *this;
+                    };
+                   delete[] s; //Deallocate Storage for this->s  "since we are overriding it";
+                    s = rhs.s // Steal the pointer from the Right Side Object and assign it to this->s
+                    rhs.s = nullptr //Null out the rhs pointer
+ 
+                     return *this; //Return the current object by reference to allow chain assignment.
+                }
+ 
+ 
+Note: If we don’t define the Move Assignment Operator overloading, Compiler will call Copy Assignment Operator during below events:
+ 
+    MyString s1 {"hello"};
+   s1 = MyString{"Bye"};
+   s1 = "How Are you";
+ 
+ 
+Unary Operators as member methods(++,--, -, !):
+ 
+Return type::operatorOp();
+ 
+Number Number::operator-();
+Number Number::operator++(); //Preincrement
+Number Number::operator++(int)  // post increment
+Boo Number::operator!() const;
+ 
+Number n1 {100};
+Number n2 = -n1;
+N2 = ++n1;
+N2 = n1++;
+ 
+Binary Operators as member methods(+,-, ==, !=, <,>..etc)
+ 
+Number Number::operator+(const &Number rhs) const;
+Number Number::operator+(const &Number rhs) const;
+Number Number::operator==(const &Number rhs) const;
+Number Number::operator<(const &Number rhs) const;
+ 
+Number n1 {100}, n2 {200};
+Number n3 = n1+n2;
+N3 = n1-n2;
+If( n1 == n2);
+ 
+Operator overloading Member Methods example:
+ 
+#include "Money.h"
+ 
+Money::Money(int dollars, int cents) : dollars{dollars}, cents{cents} {}
+ 
+Money::Money(int total) : dollars {total/100}, cents{total%100}  {}
+ 
+bool Money::operator==( const Money& m2){
+    if (this->dollars == m2.dollars && this->cents == m2.cents){
+        return true;
+    }else{
+        return false;
+    }
+}
+ 
+bool Money::operator!=(const Money& m1){
+    if (this->dollars != m1.dollars && this->cents != m1.cents){
+        return true;
+    }else{
+        return false;
+    }
+}
+ 
+ 
+ 
+Note: The this pointer holds the address of current object, in simple words you can say that this pointer points to the current object of the class. Let’s take an example to understand this concept.
+
+ 
+Exception handling and Exception Safe code:
+ 
+a.	A function which modifies some global state is said to be "exception safe",  if it leaves the global state well defined in the event of an exception that happened at any point during the function execution.
+
+Exception:
+
+Defining a customized exception:
+
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <exception>
+using namespace std;
+
+/* Define the exception here */
+class BadLengthException: public std::exception 
+{
+    private:
+    string l;
+    public:
+    BadLengthException(int len):l(to_string(len)){
+    }
+
+    char const * what() const throw() {
+        return l.c_str();
+    }
+
+      ~BadLengthException() throw() {}
+
+};
+
+
+bool checkUsername(string username) {
+    bool isValid = true;
+    int n = username.length();
+    if(n < 5) {
+        throw BadLengthException(n);
+    }
+    for(int i = 0; i < n-1; i++) {
+        if(username[i] == 'w' && username[i+1] == 'w') {
+            isValid = false;
+        }
+    }
+    return isValid;
+}
+
+int main() {
+    int T; cin >> T;
+    while(T--) {
+        string username;
+        cin >> username;
+        try {
+            bool isValid = checkUsername(username);
+            if(isValid) {
+                cout << "Valid" << '\n';
+            } else {
+                cout << "Invalid" << '\n';
+            }
+        } catch (BadLengthException e) {
+            cout << "Too short: " << e.what() << '\n';
+        }
+    }
+    return 0;
+}
+
+ 
+ 
+Containers:  
+ 
+a.	A container is a holder object that stores the collection of other objects. They are implemented as templates, which allows great flexibility in the types supported as elements.
+b.	The container manages the storage space for its elements and provides member functions to access them, either directly or through iterators.
+c.	Containers replicate structures very commonly used in the programming
+ 
+•	   Vectors (Dynamic Arrays)
+•	   Queues (Queue)
+•	   Stacks (Stack)
+•	   Heaps (Priority Queues)
+•	    list(Linkedlist)
+•	   Set (trees)
+•	   Associate arrays(Map)
+ 
+ 
+Sequence Containers:  Array, Vector, Dequeqe(double ended queue), forward_list, list(List)
+ 
+Container Adaptors: stack, queue, priority_queue
+ 
+Associative Containers:  Set, Multiset (Multipl-key set), Map, multimap(Multiple Key Map)
+ 
+Unordered Associate Containers:  unorderd_set, unordered_multiset, unordered_map, unordered_multimap. 
+ 
+Other: Two class templates that share certain properties with containers, and are sometimes classified with them: bitset, and valarray. 
+ 
+ 
+Queue:
+ 
+FIFO or LILO: The methods are 
+ 
+Pop(removes the first element)
+Front( access the first element)
+Back(access the last element in the queue)
+Push(inserts the element at the end)
+Size(size of the queue)
+Empty(to check whether its empty or not)
+Emplace( Construct and inserts element)
+Swap (swap contents of 2 queues).
+ 
+ 
+Stack:
+ 
+ 
+ Below program causes issues:
+ 
+  FILO or LIFO: Methods are:
+ 
+   top(),
+   pop(),
+   emplace(),
+   empty(), 
+   size(),
+   push(),
+   swap().
+ 
+ 
+Priority Queue:
+ 
+Priority queues are a type of container adapters, specifically designed such that the first element of the queue is the greatest of all elements in the queue and elements are in non-decreasing order(hence we can see that each element of the queue has a priority{fixed order}).
+ 
+Here are also same as above methods mostly..
+ 
+ 
+Vectors:  (Sequence Container):
+ 
+vectors use a dynamically allocated array to store their elements.
+
+Note: 
+a)	Addition of the elements to the end of array in constant time, i.e time needed to insert at the end of array is not dependent on the size of the array. Same for removal of elements.
+b)	The time needed to insert or remove the elements in the middle of the array is directly proportional to the no. of elements behind the element is being removed.
+c)	The no. of elements held is dynamic and the vector class manages the memory usage.
+ 
+Member functions:  constructor, destructor , operator=
+ 
+Iterators: begin, end, rbegin, rend, cbegin(return constant iterator to the beginning), cend, crbegin, crend
+ 
+Capacity: size, empty, resize, max_size,capacity(return size of allocated storage capacity), reserve(request a change in Capacity)
+ 
+Resize: will increase the size and set the all values to defaults in the vector, it will affect the size, it will have impact on the capacity also.
+ 
+Reserve: will allocate the memory, but it will not have impact on size or but leaves it uninitialized, it will not set all the elements to the defaults. It will only have impact.
+ 
+The resize() method (and passing argument to constructor is equivalent to that) will insert or delete appropriate number of elements to the vector to make it given size (it has optional second argument to specify their value). It will affect the size(), iteration will go over all those elements, push_back will insert after them and you can directly access them using the operator[].
+
+The reserve() method only allocates memory, but leaves it uninitialized. It only affects capacity(), but size() will be unchanged. There is no value for the objects, because nothing is added to the vector. If you then insert the elements, no reallocation will happen, because it was done in advance, but that's the only effect.
+So it depends on what you want. If you want an array of 1000 default items, use resize(). If you want an array to which you expect to insert 1000 items and want to avoid a couple of allocations, use reserve()
+ 
+ 
+The following code uses emplace_back to append an object of type President to a std::vector. It demonstrates how emplace_back forwards parameters to the President constructor and shows how using emplace_back avoids the extra copy or move operation required when using push_back.
+
+Declaration and Initialization:
+
+b.	Vector<int> vint(10); //instantiate a vector with 10 elements.
+c.	Vector<int> vint(10,90); //instantiate a vector with 10 elements with (initializes) each of the value as 90.
+d.	Vector<int> vint2(vint); //instantiating a vector and initializes with content of another vector.
+e.	Vector<int> vint3(vint.begin(), vint.begin()+5); //Using iterators instantiating with 5 elements of another vector
+
+Initializer list:
+
+Vector<int> v1 = {1,2,3};
+Vector<int> v2 {1,2,3};
+
+Inserting telements at a Given position using insert:
+
+a)	Vint.insert(vint.begin(),25); // Inserting an element at the beginning of the vector
+b)	Vint.insert(vint.end(),2,40);//inserting 2 numbers of value 40 at the end of vector.
+c)	Insert the contents of one vector into another vector at a chose position.
+
+Vector<int> vint (2,30); // it has 2 elements whose value is 30.
+Vint1.insert(vint1.begin()+1, vint.begin(), vint.end());
+
+d)	You can even use the “find” method in the STL to find out an element and using that iterator , insert an element at the position.
+
+Note: If the container is using frequent insertions, don’t use the vector instead , use a list.
+
+Note: The Preemptive increase in the capacity of the vector when the internal buffer is reallocated is not regulated by any clause in the standard. This is dependent on the flavor of the STL being used.
+
+Usually, initially a capacity of 8 elements will be allocated, after 9th element insertion, capacity will change to 16 automatically.
+
+Accessing elements:
+
+a)	Use the semantics [], with an index value in it to access an element at a particular place.
+b)	Better to use .at function, as it throws the exception, if we are trying to access an element beyond the size of the vector. As it first checks the size and then try to access the element at that position.
+
+Removing elements from the vector:  pop_back() hhcc h77y
+ 
+From <https://en.cppreference.com/w/cpp/container/vector/emplace_back> 
+ 
+ 
+Modifiers:
+ 
+Assign: Assign a vector content
+Push_back: insert a element at the end
+Pop_back: delete an element at the end
+Insert: insert elements
+Erase: Erace elements
+Clear: clear content
+Swap: Swap contents
+Emplace: Construct and insert an element
+Emplace_back: Construct and insert an element at the end.
+ 
+Element Access: 
+ 
+At []
+Front()
+Back()
+Operator[] //operator access element
+Data //Access data (in c++11)
+ 
+ 
+1.	c_str():   Returns a pointer to an array that contains a null terminated sequence of characters(i.e a c string) representing the current value of the basic_string. 
+ 
+ 
+Set: (type of associative container in which each element is unique)
+ 
+It will allow to add only unique elements to it.
+ 
+ 
+Mutex:    
+ 
+The mutex class is synchronization primitive that can be used to protect shared data from being simultaneously accessed by multiple threads.
+ 
+1.	its defined in the header <mutex>,  and with class as "std::mutex"
+ 
+2.	Mutex offers exclusive and non-recursive ownership semantics:
+ 
+        a) A Calling thread owns a mutex from the time that is successfully calls either lock or try_lock until it calls unlock.
+ 
+        b) When thread owns a mutex, all other threads will block(for calls to lock) or receive a false return value (for try_lock) if they attempt to claim ownership of a  mutex.
+ 
+       c) A calling thread must not own the mutex prior to calling lock or try_lock.
+ 
+ 
+Note:  the behaviour of the program is undefined, if a mutex is destroyed while still it is owned by threads or a thread terminates while owning a mutex.
+ 
+     d) std::mutex is neither copyable nor movable.
+ 
+ 
+Functions : constructor and destructor,   Locking: lock, try_lock, unlock ,   Native Handle: native_handle.
+ 
+Note:  std::mutex is not usually not accessed directly , std::unique_lock, std::lock_guard, or std::scoped_lock(since c++17)  , manage locking in a more exception safe manner.
+ 
+ 
+Exception handling:
+ 
+What causes exception:
+ 
+1.	Insufficient resources
+2.	Missing resources.
+3.	Invalid operations.
+4.	Range violations.
+5.	Underflows and overflows
+6.	Illegal data and many others.
+ 
+Note: When your code handles exceptions, it is said to be exception safe.
+ 
+a.	Keywords: try, catch , throw(throws an exception, followed by an argument)
+ 
+1.	Difference between <static_cast> and regular typecasting.
+ 
+ 
+Smart Pointers:
+ 
+General notes:
+ 
+a.	Issues with Raw pointers.
+b.	Unique pointer will not share the common heap storage.
+c.	Shared pointer will share the common heap storage.
+d.	All smart pointers are about ownership and RAII(Resource acquisition and init initialization).
+e.	Custom deleters.
+ 
+Issues with Raw pointers:
+ 
+a.	c++ provides absolute flexibility with memory management.
+ 
+i.	Allocation
+j.	De-allocation
+k.	Lifetime management.
+ 
+b.	Some potentially serious problems:
+ 
+i.	Uninitialized (wild) pointers).
+j.	Memory leaks(Allocated memory is never deallocated)
+k.	Dangling pointers (one pointer is pointing to a storage which is already been deallocated, i.e pointer is pointing to invalid memory. It will cause problems.
+l.	Not Exception safe
+ 
+ 
+Smart pointers are:
+ 
+a.	Objects.
+ 
+b.	Can only point to heap allocated memory.
+ 
+c.	Automatically call delete when no longer needed.
+ 
+   d)  Adhere to RAII principles.
+ 
+  e) C++ smart pointers:
+       
+        i) Unique pointers(unique_ptr)
+        ii) Smart pointers(smart_ptr)
+ 
+       iii) Weak pointers (weak_ptr).
+       iv) Auto pointers (auto_ptr).
+ 
+ 
+Unique Pointers:
+ 
+a.	 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Shared Pointers: (Need not to call delete for shared ptrs)
+ 
+a.	Provides shared ownership of heap objects.
+ 
+  b) shared_ptr<T>
+ 
+1.	Points to an object of type T on the heap
+2.	It's not unique, there can be multiple shared ptrs pointing to the same object on heap.
+3.	Establishes shared ownership relationship.
+4.	Can be assigned and copied.
+5.	Can be moved.
+6.	Does not support managing arrays by default.
+7.	When use count is zero, managed object is automatically destroyed.
+ 
+ 
+Notes:
+ 
+1.	Empty parameter list in C mean that the parameter list is not specified and function can be called with any parameters. In C, it is not a good idea to declare a function like fun(). To declare a function that can only be called without any parameter, we should use “void fun(void)”.
+ 
+2.	As a side note, in C++, empty list means function can only be called without any parameter. In C++, both void fun() and void fun(void) are same.
+ 
+ 
+3.	If in a C program, a function is called before its declaration then the C compiler automatically assumes the declaration of that function in the following way:
+int function name();
+And in that case if the return type of that function is different than INT ,compiler would show an error.
+ 
+ 
+4.	 In c three continuous dots is known as ellipsis which is variable number of arguments of function. The values to parameters are assigned one by one. Now the question is how to access other arguments
+ 
+ 
+Function pointer:
+ 
+This is a simple program with function pointers. fun is assigned to point to demo. So the two statements "(*fun)();" and "fun();" mean the same thing.
+ 
+#include <stdio.h>
+int main()
+{
+    void demo();
+    void (*fun)();
+    fun = demo;
+    (*fun)();
+    fun();
+    return 0;
+}
+ 
+void demo()
+{
+    printf("GeeksQuiz ");
+}
+ 
+ 
+Strings:
+ 
+a.	Character functions. 
+b.	c-Styled Strings.
+c.	Working with c-styled strings.
+d.	C++ Strings && working with c++ styled strings.
+ 
+Character functions:
+ 
+1.	#include <cctype> (header file).
+2.	Function_name(char) //Expects only a single character.
+3.	Functions for testing character or converting character case.
+Ex:
+Testing character:
+   isalpha(d); isalpnum(d); isupper(d), islower(); isprint(d), ispunt(d)(if d is a punctuation character), isspace(d)(True if d is a whitespace)
+   isdigit(d);
+ 
+Converting case:
+  
+ a) tolower(d), toupper(d)
+ 
+ 
+C-Styled Strings:
+ 
+Sequence of characters:
+ 
+  a) Contiguous in memory.
+ b) implemented as an array of characters.
+ c) terminated by a null character( null -- character with a value zero)
+d.	Referred to as zero or null terminated strings.
+ 
+String Literal:
+ 
+a.	Sequence of characters in double quotes "shankar"
+b.	Constant.
+c.	Terminated with null character.
+ 
+Compiler inserts a null character at the end of the string literal.
+ 
+Declaring c-styled strings: (are included in the header #include <cstring>
+ 
+1.	Char my_name[]  {"shankar1234567891234"};
+ 
+  2) Below program is wrong.
+       char name[8];  
+       name  = "shankar"; //Error.
+ 
+      strcpy (name, "Shankar"); //Correct
+
+3) Define const string:
+
+   Const char* constString = “this is a constant string”;
+
+//This is will work
+ Std::string  s1(constString)//We can pass Const string while instatiating new string
+
+//Initialize String to 1st few chars of const string:
+Std::string s2(constString, 5);
+ 
+ 
+Examples:
+ 
+#include <cstring>
+ 
+Char ch[80];
+ 
+Strcpy (ch, "shankar");
+Strcat (cg, "there");
+Cout << strlen(str) << endl; // writes 11, it does not count the null terminated character.
+ 
+Strcmp( str, "another") //return -1;
+ 
+Functions to covert 
+ 
+#include <cstdlib> //General purpose functions
+ 
+Includes functions to covert C-Style Strings to 
+ 
+a.	Interger.
+b.	Float
+c.	Long.
+d.	Etc…
+ 
+Note: "Cin" won't the read the complete input if the input has a space in b/w. So use getline for this.
+ 
+ 
+C++ Strings:
+ 
+a.	Std::string is a class in the Standard Template Library
+ 
+       i) #include <string>
+       ii) they are defined in the std namespace, without including the std namespace in the source file, string has to be prefixed with std
+      iii)  Contiguous in memory.
+      iv) dynamic size.
+       v) work with input and output streams.
+       vi) Lots of useful member functions.
+       vii) Our familiar operators can be used ( +, = , ==, <, >, <=, >=, !=, []
+       viii) can be easily converted to C-Styled Strings.
+        ix) Safer.
+ 
+Declaring and Initializing:
+ 
+a.	#include <string>
+Using namespace std;
+ 
+Int main(){
+ 
+String s1 {"shankar"};
+String s2 {s1};
+String s3 (3,'x') ; xxx
+String s4 {"Shankar", 3}; // Sha
+String s5 {s1, 0, 2}; //sh
+ 
+Assignment , s2 = s1;
+Concatenation , //string s3 = s1 + "Shankar" + s2;
+Append , s1.append(s2)// Here S1 will be modified new string (s1+s2).
+Accessing characters // s1[0] or s1.at(0);
+With for loop;
+Ex1:
+String s {"shankar"};
+For (char c; s){
+Cout << c << endl;
+S
+H
+A
+N
+K
+A
+R
+Ex2:
+String s {"shankar"};
+For (int c; s){
+Cout << c << endl;
+70
+114
+65
+Xx
+Xx
+Xx
+0 // null character
+ 
+Comparing the strings:
+String s1 {"Shankar"};
+S1 == s2;
+S1 <  s2;
+S1 > s2;
+S1 == "Apple"
+S1 != s2;
+ 
+Substrings:
+(Extract sub string from a string)
+Syntax: substr(x, y) ; // x is staring index to start, y is length of string staring from index x;
+ 
+String s1 {"shankar goud vemula"};
+ 
+S1.substr(0,2); //sh
+S1. substr(5, 7); //ar
+ 
+Find(search_string) : Returns the index of a sub string in the std::string;
+ 
+String s1 {"this is a test"};
+ 
+Cout << s1.find("this") << endl; // 0
+Cout << s1.find('a') << endl; // 8
+Cout << s1.find("test") << endl;//10
+Cout << s1.find("was") << endl; // -1, string::npos
+
+         Ex: finding recurrence of a char/word in a string:
+        Size_t strops = s1.find(“day”,0);
+
+        While(strops != string::npos){
+            Cout << “day is found at position” << strops << endl;
+            Strops = s1.find(“day”, strops+1);
+        };
+
+ 
+Erase and clear :  Remove a substring of characters with a length from a std::string 
+ 
+String s1 {"this is shankar"};
+S1.erase(3,4); //thi shankar
+S1.clear() ; //empty string
+ 
+Length() // To find length of string.
+ 
+Input (>>) and getline() //Reading std::string from cin
+ 
+String s1 ;
+Cin >> s1; //ip: This is Shankar, output: //This (it does accept the beyond the white space)
+ 
+Getline(cin, s1); //this is Shankar //It stops reading until \n or new line found
+Cout << s1 << endl;//this is shankar
+ 
+Getline(cin, s1, 'x') ; //This is shankarx //Get line stops reading at 'x'
+Cout << s1 << endl; // This is shankar
+ 
+If you try to use mix of the both getline(cin,s1) or cin >> s1, it will cause issues, it will hang for "cin>> s1", instead use completely getline in the code.
+ 
+Classes:
+ 
+          a) Creating a class ex:
+ 
+               class Player{
+ 
+                 int score;
+                 std::string name;
+ 
+                  void calculate();
+                  void profile();
+              }
+ 
+          Player p1;
+          Player p2;
+ 
+          Player *p3 = new Player();( Memory allocation in the heap and created dynamically);
+          delete p3;(Memory is freed up using the delete key word).
+ 
+ 
+Assert function is used to assert that condition is satisfied, if it does not, program will terminate there itself.
+ 
+Ex:
+ 
+#include <stdio.h>
+#include <assert.h>
+ 
+int main() {
+  int a, b;
+ 
+  printf("Input two integers to divide\n");
+  scanf("%d%d", &a, &b);
+ 
+  assert(b != 0);
+ 
+  printf("%d/%d = %.2f\n", a, b, a/(float)b);
+ 
+  return 0;
+}
+ 
+Output:
+ 
+Input two integers to divide
+5 0
+a.out: assrt.cpp:10: int main(): Assertion `b != 0' failed.
+Aborted (core dumped)
+ 
+ 
+Access Modifiers:
+ 
+1.	Private: Compilation error , if we try to access private varialbes outside the class
+2.	Public
+3.	Protected: Can be accessed only by the inherited classes.
+ 
+Implementing Member methods:
+ 
+1.	Member methods have access to member attributes.
+2.	Can be implemented inside the class declaration.(implicitly inline)
+3.	Can be implemented outside the class declaration ( "Classname::method_name")
+4.	Can separate specification from the implementation ( .h file for class declaration, .cpp file for class implementation).
+ 
+Note: If a class header file(.h file) is included in one more than one file, then compiler looks for the definitions in multiple cpp files, this will give an error as duplicate definitions, to resolve this an include  guard is defined. If we include this guard , compiler will process it only once, no matter how many times, this file is included in many files.
+ 
+  Ex: Include Guards or Preprocessor Guards
+ 
+   Account.h file
+     #ifndef   _ACCOUNT_H_
+     #define   _ACCOUNT_H_
+ 
+     < Account class declaration>
+ 
+     #endif
+ 
+1.	Angle Brackets includes (ex: #include <iostream>) is system header files, wheras other "" includes local project files.
+ 
+Account.h file
+ 
+#include <iostream>
+using namespace std;
+class Account {
+ private:
+   int bal;
+ public:
+  void setBalance(int b);
+  int  getBalance();
+ 
+};
+ 
+Account.cpp file:
+ 
+#include <iostream>
+#include "Account.h>
+ 
+Void Account::setBalance(int b){
+   bal = b;
+};
+ 
+Int Account::getBalance(){
+ 
+ return bal;
+}
+ 
+NOTE: Never include .cpp file in the main file, always include .h or header file.
+ 
+Main.cpp
+ 
+#include <iostream>
+#include "Account.h>
+ 
+ 
+g++ -c Account.cpp -o Account.o
+g++ Acc.cpp Account.o  -std=c++11
+ 
+ 
+Note:
+ 
+17
+unsigned char* is basically a byte array and should be used to represent raw data rather than a string generally. A unicode string would be represented as wchar_t*
+According to the C++ standard a reinterpret_cast between unsigned char* and char* is safe as they are the same size and have the same construction and constraints. I try to avoid reintrepret_cast even more so than const_cast in general.
+If static cast fails with what you are doing you may want to reconsider your design because frankly if you are using C++ you may want to take advantage of what the "plus plus" part offers and use string classes and STL (aka std::basic_string might work better for you)
+ 
+From <https://stackoverflow.com/questions/658913/c-style-cast-from-unsigned-char-to-const-char/658915> 
+ 
+ 
+Compiling boost::thread code:
+ 
+sudo g++ bthrd.cpp  -std=c++11 -lboost_thread  -lboost_system
+ 
+ 
+Flush stream buffer
+Synchronizes the associated stream buffer with its controlled output sequence.
+ 
+For stream buffer objects that implement intermediate buffers, this function requests all characters to be written to the controlled sequence.
+ 
+Its behavior is equivalent to calling os's member function flush.
+ 
+A member function with the same name and behavior exists (see ostream::flush).
+ 
+From <http://www.cplusplus.com/reference/ostream/flush-free/> 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Function Objects:
+
+1) On a conceptual level , function objects are objects that work as functions.
+2) On implementation level,  fun. Objects are objects of a class that implement operator().
+3) Although functions and function pointers can also be classified as function objects, it is the capability of an object of a class that implements an operator() to carry state(i.e , values in member attributes of the class) that makes it useful with STL algorithms.
+
+4) Functions objects typically used by C++ programmer (working with STL) classified into following types:
+
+  a) Unary Function: A function called with one arg. Ex: f(x), when unary function returns bool, its called as Unary Predicate. 
+b) Binary Function: A function called with 2 args. Ex: f(x,y), when a binary function returns bool, its called as Binary Predicate. 
+
+**A function object that combines 2 fun objects is called an “Adaptive function object”.
+
+
+Ex: 
+
+Template <typename T>
+Void fundispayElement(const T& t){
+   Cout << element << “ “;
+}
+
+The above function can also be represented as with different implementation , in which function is actually contained by the operator() of a class or struct.
+
+Template <typename t>
+Struct DisplayElement{
+     void operator()(const t& t1){
+        cout << t1 << ‘ ’ << endl;
+   }
+}
+
+Or 
+Template <typename t>
+Class Display{
+Public:
+Operator(){
+   Cout << t1 << “ ”<< endl;
+};
+}
+
+Usage in algorithms:
+a) For_each(vec.begin(), vec.end(), DisplayElement<int>()); //Unary function object
+b) the above same thing can be called using the “fundispayElement” like
+for_each(vec.begin(),vec.end(), fundispayElement.
+
+c) The real advantage of using a function object implemented in a struct become apparent when you are able to use the object of the struct to store information.  This is something “fundispayElement” cannot do the way a struct can because a struct can have member attributes other than operator(). Sightlty modified version
+template <typename  elementType>
+struct DisplayElement{
+  int count;
+  DisplayElement(){ count=0};
+
+  operator()(const  elementType& ele){
+      ++count;
+ }
+
+Note: C++11 introduces lamda expressions that are unnamed function objects. We can write compact code like:
+
+      for_each(v1.begin(), v1.end(), [](int& e){cout << e << “ ”;});
+
+//Unary Predicate: A unary function that returns a bool is  a predicate. . Such functions help make decisions  for STL algorithms
+
+Ex:   
+Template <typename T>
+Struct IsMultiple{
+   T t1;
+   IsMultiple(const T& t2):t1(t2){};
+   bool operator()(const T& e) const{
+      return (e%t1) == 0;
+   }
+
+Unary Predicate Usage: 
+auto iElement = find_if(v1.begin(),v1.end(),IsMutliple<int>(div));
+
+Unary predicates find application in a lot of STL algorithms such as std::partition that can partition a range using a predicate,   stable_partition that does same while keeping relative order of the elements partitioned, find funtions such as find_if and functions that help erase elements such as std::remove_if that erase elements in the range that satisfy the predicate.
+
+Binary Functions:
+
+Binary functions are used in algorithms such as std::transform where you can use to multiply the contents of 2 containers. 
+
+template <typename elementType>
+class Multiply{
+elementType operator()(const elementType& e1, const elementType& e2){
+     return e1*e2;
+}
+
+Example of multiple 2 vectors (v1 and v2 of ints) and writing the result to v3.
+
+ transform(v1.begin(),v1.end(),v2.begin(), v3.begin(), Multiply<int>(3));
+
+Binary Predicate:
+
+A function which accepts 2 args and return a bool is a binary predicate. Such functions find application in STL algorithms such as std::sort
+
+ex:
+class CmpStringNoCase{
+  public:
+   bool operator()(const string& s1, const string& s2){
+          string s3, s4;
+  //Here Resizing is very important, without that Soring will not be done.
+       s3.resize(s1.size());
+       s4.resize(s2.size());
+          transform(s1.begin(),s1.end(),s3.begin(), tolower()); //converting s1 to lower case and writing to s3;
+         transform(s2.begin(),s2.end(),s4.begin(), tolower()); //converting s2 to lower case and writing to s4;
+         return (s3 <s4);
+}
+}
+  
+
+High Lights:
+
+1)	Predicates are special type of function objects, they always return true.
+2)	for remove_if, we can use a Unary Predicate which will take a value to be processed as the intial state via the constructor.
+3)	for map, we can use a binary predicate.
+
+
+
+    
+    
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Threads:
+ 
+1.	Multi threading was supported in the C++11. Prior to C++11, we had to use posix threads  or pthreads library in C. 
+Std::thread, 
+The thread classes and given functions are defined in the thread header file  "#include <thread>"
+ 
+To start a thread we simply need to create  new thread object and pass the executing code to be called into the constructor of the object. Once a object is created , a new thread is launched which will execute the code specified in the callable.
+ 
+A callable can be either of the three:
+ 
+  a) a function pointer.
+      
+    void foo(params){
+    }
+  
+    std::thread thread_obj(foo, params)
+ 
+  b) A function Object.
+ 
+    auto f = [](params){
+    // do something
+    };
+ 
+   std::thread thread_obj(f, params)
+ 
+ c) A lamda expression
+ 
+  we can also pass lamda functions directly to the constructor.
+   std::thread thread_object([] (params) { //do something};,params);
+ 
+ 
+   
+Launching threads using function objects:
+ 
+Class fucntion_obj {
+ 
+Public:
+ void operator()(params){
+ }
+}
+ 
+Std::thread t1(fucntion_obj(), params);
+ 
+ 
+Lamdas:
+ 
+1.	Lamdas are such an easy way to crate function objects
+2.	Without lamdas, the STL _if algorithms (e.g st::find_if, std::remove_if, std::count_if .. Etc) tend to be employed with the only most trivial predicates, but when the lamdas are available , use of these algorithms with non-trivial algorithms blossoms.
+3.	Outside the STL, lamdas make it possible to quickly create custom deleters for std::unique_ptr, and std::shared_ptr, and they make the specification of predicates for the condition variables in the threading  API equally straight forward.
+ 4)    Beyond the Standard Library, lambdas facilitate the on-the-fly specification of callback functions, interface adaption functions, and context-specific                
+          functions for one-off calls.
+ 
+A lamda expression:
+ 
+std::find_if(container.begin(), container.end(), [](int val) { return 0 < val && val < 10; });
+ 
+a.	A closure is the runtime object created by a lamda. Depending upon the capture mode, closures hold copies or references to the captured data, in the call to the std::find_if above, closure is the object that’s passed at the runtime as a third argument to the find_if function 
+b.	A closure class is a class from which a closure is instantiated. Each lambda causes compilers to generate a unique closure class. The statements inside a lambda become executable instructions in the member functions of its closure class.
+c.	However, closures may gen‐ erally be copied, so it’s usually possible to have multiple closures of a closure type corresponding to a single lambda. For example, in the following code.
+{ int x
+ 
+; // x is local variable … 
+ 
+auto c1 =  [x](int y) { return x * y > 55; }; // closure produced // by the lambda , // c1 is copy of the
+ 
+auto c2 = c1; // c2 is copy of c1 
+ 
+auto c3 = c2; // c3 is copy of c2 … } 
+ 
+c1, c2, and c3 are all copies of the closure produced by the lambda.
+ 
+ 
+Task Based Vs Thread Based approaches in the C++11:
+ 
+ 
+If you want to run  a function asynchronously , you have 2 choices:
+ 
+a.	Thread based approach:
+          
+          doasyncjob();
+ 
+          std::thread t(doasyncjob)
+ 
+  b)  Task based approach:
+ 
+       auto func = std::async(doAsyncWork);  //the function object passed to std::async (e.g., doAsyncWork) is con‐ sidered a task. The task-based approach is typically 
+ 
+The task-based approach is typically superior to its thread-based counterpart, and the tiny amount of code we’ve seen already demonstrates some reasons why. Here, doAsyncWork produces a return value, which we can reasonably assume the code invoking doAsyncWork is interested in.
+ 
+With the task-based approach, it’s easy, because the future returned from std::async offers the get function. The get func‐ tion is even more important if doAsyncWork emits an exception, because get pro‐ vides access to that, too. With the thread-based approach, if doAsyncWork throws, the program dies (via a call to std::terminate). 
+ 
+A more fundamental difference between thread-based and task-based programming is the higher level of abstraction that task-based embodies. It frees you from the details of thread management, an observation that reminds me that I need to summa‐ rize the three meanings of “thread” in concurrent C++ software:
+ 
+a.	Hardware threads: are the threads that actually perform computation. Contempo‐ rary machine architectures offer one or more hardware threads per CPU core. 
+b.	• Software threads (also known as OS threads or system threads) are the threads that the operating system1 manages across all processes and schedules for execu‐ tion on hardware threads. It’s typically possible to create more software threads than hardware threads, because when a software thread is blocked (e.g., on I/O or waiting for a mutex or condition variable), throughput can be improved by exe‐ cuting other, unblocked, threads.
+ 
+ 
+Inheritance:
+ 
+1.	Public inheritance.(the is-a relationship is only applicable in public inheritance
+2.	Private Inheritance.
+3.	Protected inheritance.
+ 
+Sub classes can access the both (public and protected) variables and member functions of super/base class.
+ 
+Syntax for inheritance:
+ 
+Class Fish{
+ 
+ };
+ 
+Classs Tuna: <access specifier> Base {
+}
+ 
+With public inheritance , the public varialbes inside the base class can be modified in the main method also. 
+ 
+To make certain variables accessible by only the derived class, but not accessible outside the world. This is where the protected inheritance comes into the picture. 
+ 
+--> When you declare an attribute as protected , you can effectively making the attribute accessible to the classes that derive and friends. Yet simultaneously making it inaccessible to everyone else outside, including main.
+ 
+This is a very important aspect of the OOP, combining data abstraction and inheritance, in ensuring that derived classes can safely inherit base class attributes that cannot be tampered with by anyone outside the hierachial system.
+ 
+Base class Initialization:  What if a base class contains an overloaded constructor that enforces the arguments at the time of initialization, how would such a base class is instantiated when derived class is being constructed.
+ 
+The clue lies in using the initialization lists and invoking an appropriate base class constructor via the constructor of a derived class.
+ 
+With this, derived class never access a base class variable directly in spite of being it at as protected member variable, so ti can be initialized through constructor of base class.
+ 
+To ensure max. security, if the derived class donot need to access base class attribute, remember to mark it as a private.
+ 
+Ex:
+ 
+Class Base{
+ 
+ public:
+    Base(int somenum){
+    }
+};
+ 
+Class Derived: public Base{
+ 
+Public:
+ 
+   Derived(): Base(25){
+   }
+ 
+//To call a method(from main method) , which is overridden by the subclass with subclass instance.
+ 
+  subclass.Mainclass::mainclass_method;
+ 
+//Invoking methods of base class in derived class:
+ 
+Class Fish{
+ 
+  private: 
+    bool freshwater;
+  public:
+  Fish(bool fresh): freshwater(fresh){
+  }
+   void swim(){
+     cout<< "it’s a main fish methiod" << end;
+  }
+}
+ 
+Class Carp: public Fish{
+   public:
+      Carp(): Fish(true){
+      }
+     void swim(){
+          cout<< "it’s a basically tuna swim" << endl;
+          Fish::swim()
+      }
+}
+ 
+Private Inheritance:      
+ 
+Private inheritance of a base class meaning that all public members and attributes of the base class are private to anyone with an instance of the Derived class
+ 
+***************
+Polymorphism allows objects of different types to be treated similarly. Polymorphism is implemented in c++ via the inheritance. 
+ 
+1.	Object of base class will behave like an actual derived class using the Virtual functions.
+2.	Use of Virtual keyword means, compiler ensures that any overriding variant of the requested base class method is invoked.
+3.	What happens when a function calls operator "delete" using a pointer of type Base* that actually points to instance of the type *Derived.(Need for Virtual destructors). //Destructor of the deriving class (that has been instantiated on the free storage using the new key word would not be deleted if the delete is called using a pointer of type Base). This results in resources not being released, memory leaks , and so on.. 
+ 
+1.	Using Virtual destructors to ensure that Destructors in the derived classes are invoked when invoking a Pointer of Type Base
+2.	Always declare base class destructor as Virutal. This ensures that one with a Pointer *Base cannot invoke delete in a way that the destructor of the deriving classes is not invoked.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ For loop in shell:
+
+for i in {50..50}; do  for j in {0..3} ; do echo pg-$i-$j ;
+
+
+//TCP Sockets understaning:
+https://www.tldp.org/HOWTO/html_single/TCP-Keepalive-HOWTO/
+
+
+
+Establishing a Secure Connection Using SSL
+Secure Socket Layer (SSL) technology is security that is implemented at the transport layer (see Transport-Layer Security, for more information about transport layer security). SSL allows web browsers and web servers to communicate over a secure connection. In this secure connection, the data that is being sent is encrypted before being sent and then is decrypted upon receipt and before processing. Both the browser and the server encrypt all traffic before sending any data. SSL addresses the following important security considerations.
+•	Authentication: During your initial attempt to communicate with a web server over a secure connection, that server will present your web browser with a set of credentials in the form of a server certificate. The purpose of the certificate is to verify that the site is who and what it claims to be. In some cases, the server may request a certificate that the client is who and what it claims to be (which is known as client authentication).
+•	Confidentiality: When data is being passed between the client and the server on a network, third parties can view and intercept this data. SSL responses are encrypted so that the data cannot be deciphered by the third party and the data remains confidential.
+•	Integrity: When data is being passed between the client and the server on a network, third parties can view and intercept this data. SSL helps guarantee that the data will not be modified in transit by that third party.
+Installing and Configuring SSL Support
+An SSL HTTPS connector is already enabled in the Application Server.
+If you are using a different application server or web server, an SSL HTTPS connector might or might not be enabled. If you are using a server that needs its SSL connector to be configured, consult the documentation for that server.
+As a general rule, to enable SSL for a server, you must address the following issues:
+•	There must be a Connector element for an SSL connector in the server deployment descriptor.
+•	There must be valid keystore and certificate files.
+•	The location of the keystore file and its password must be specified in the server deployment descriptor.
+You can verify whether or not SSL is enabled by following the steps in Verifying SSL Support.
+
+
+ 
+ 
+ 
+ 
+ 
+Inline Functions:   A regular function call is translated into a CALL instruction, which results in the stack operations and micro processor execution shift to the functions and so on. This is a quite long process. 
+ 
+For a simple function like below, the overhead of performing an actual function call on this might be a quite high for the amount of time spent actually executing the function. This is why C++ compilers enables the programmers to declare such functions as inline. 
+ 
+Double GetPi(){
+   return 3.14;
+};
+ 
+After Inline:
+ 
+Inline double GetPi(){
+     return 3.14;
+};
+
+
+ 
+Note: When optimizing for size, compilers might often reject many inline requests as that might bloat code.
+When optimizing for the speed, compilers typically sees and utilizes the opportunities to inline code where it would make sense and does it for you.
+
+Default Arguments in C++:
+
+A default argument is a value provided in a function declaration that is automatically assigned by the compiler if the caller of the function doesn’t provide a value for the argument with a default value.
+
+#include<iostream> 
+using namespace std; 
+  
+// A function with default arguments, it can be called with  
+// 2 arguments or 3 arguments or 4 arguments. 
+int sum(int x, int y, int z=0, int w=0) 
+{ 
+    return (x + y + z + w); 
+} 
+  
+/* Driver program to test above function*/
+int main() 
+{ 
+    cout << sum(10, 15) << endl; 
+    cout << sum(10, 15, 25) << endl; 
+    cout << sum(10, 15, 25, 30) << endl; 
+    return 0; 
+}
+
+Key Points:
+
+•	Default arguments are different from constant arguments as constant arguments can't be changed whereas default arguments can be overwritten if required.
+•	Default arguments are overwritten when calling function provides values for them. For example, calling of function sum(10, 15, 25, 30) overwrites the value of z and w to 25 and 30 respectively.
+•	During calling of function, arguments from calling function to called function are copied from left to right. Therefore, sum(10, 15, 25) will assign 10, 15 and 25 to x, y, and z. Therefore, the default value is used for w only.
+•	Once default value is used for an argument in function definition, all subsequent arguments to it must have default value. It can also be stated as default arguments are assigned from right to left. For example, the following function definition is invalid as subsequent argument of default variable z is not default.
+
+// Invalid because z has default value, but w after it  
+// doesn't have default value 
+int sum(int x, int y, int z=0, int w) 
+
+Advanced Pointer Notation:
+
+nums[i][j] is equivalent to   *(*(nums+i)+j);
+
+int nums[2][3]  =  { { 16, 18, 20 },
+                     { 25, 26, 27 } };
+
+//String Literals:
+const char *name = “Shankar”;
+
+Void Pointers:
+This is a special type of pointer available in C++ which represents absence of type. void pointers are pointers that point to a value that has no type (and thus also an undetermined length and undetermined dereferencing properties).
+This means that void pointers have great flexibility as it can point to any data type. There is payoff for this flexibility. These pointers cannot be directly dereferenced. They have to be first transformed into some other pointer type that points to a concrete data type before being dereferenced.
+
+
+
+
+
+
+
+
+
+ 
+ 
+SemaPhores in c++:  Semaphores basically a signaling mechanism, (whereas mutex is a locking mechanism).
+ 
+C++ standard does not define a semaphore type. You can write your own with an atomic counter, a mutex and condition variable if you need. 
+but most uses of semaphores are better replaced with mutexes and/or condition variables anyway.
+ 
+Mutex: is a mutual exclusion object that sychronizes access to a resource. The mutex is a locking mechanism that ensures that only one thread can acquire the mutex at a time, and entire critical section. This thread only releses the mutex when it exits the critical section.
+ 
+Semaphore: is a signaling mechanism, a thread is waiting on a semaphore can be signaled by another thread. This is different than a mutex as the mutex can be signaled only the thread that called the wait section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Algorithm Techniques:
+
+
+BackTracking:  it’s a algorithm technique which is used to resolve the problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).
+
+
+For example, consider the SudoKo solving Problem, we try filling digits one by one. Whenever we find that current digit cannot lead to a solution, we remove it (backtrack) and try next digit. This is better than naive approach (generating all possible combinations of digits and then trying every combination one by one) as it drops a set of permutations whenever it backtracks.
+
+
+
+
+
+
+
+
+
+Dynamic Programming:
+
+Some famous Dynamic Programming algorithms are: 
+1.	Unix diff for comparing two files
+2.	Bellman-Ford for shortest path routing in networks
+3.	TeX the ancestor of LaTeX
+4.	WASP - Winning and Score Predictor
+
+5.	The core idea of Dynamic Programming is to avoid repeated work by remembering partial results and this concept finds it application in a lot of real life situations.
+
+	In programming, Dynamic Programming is a powerful technique that allows one to solve different types of problems in time O(n2) or O(n3) for which a naive approach would take exponential time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Design Principles:
+
+1) Single Responsibility Principle:
+The single-responsibility principle (SRP) is a computer-programming principle that states that every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class, module or function.
+
+Ex: Suppose a class is there which will have entries for Jounals(journtal title, multiple entries) and if we have one more function to store the all the journal entries. Here instead of having the function to store the journal entries inside the sam function of the class, create a separate class for that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+         
+ 
+1)	Sleep(), usleep()(micro seconds sleep), are functions defined the header <uinstd.h>, and they block the execution of the thread for the amount of sleep time.
+2)	Std::this_thread::sleep_for() is defined for the thread class in c++ (header <thread>).
+3)	
+ 
+ 
+ 
+
+//Extracting the Pod Information and export them as the environment variables:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dapi-envars-fieldref
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "sh", "-c"]
+      args:
+      - while true; do
+          echo -en '\n';
+          printenv MY_NODE_NAME MY_POD_NAME MY_POD_NAMESPACE;
+          printenv MY_POD_IP MY_POD_SERVICE_ACCOUNT;
+          sleep 10;
+        done;
+      env:
+        - name: MY_NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: MY_POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        - name: MY_POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        - name: MY_POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: MY_POD_SERVICE_ACCOUNT
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.serviceAccountName
+  restartPolicy: Never
+
+ 
+ Sizeof():  sizeof a empty class is 1 byte. t is nonzero to ensure that the two different objects will have different addresses.
+
+The instances of the below class has the size of 4 bytes(for 32 bit compier) and 8 bytes (for 64 bit compiler), its because it has the char* pointer whose size is either 4 bytes or 8 bytes.
+
+MyStrSize m1{“shank”};
+MyStrSize m2{“Shankar”};  //here both instances has the same size
+
+/*
+class MyStrSize{   
+private:
+    char *buffer;    
+public: 
+    MyStrSize(char* );
+    MyStrSize(const MyStrSize& m);
+    ~MyStrSize();
+    int GetLength();
+    const char* GetString();
+}; */
+
+Friend Key Word:     
+
+A class does not permit external access to its data members and methods which are declared as private. This rule is waived for those classes(A friend class inside a class)  and functions (inside another class ) that are disclosed as friend classes or friend functions with the keyword “Friend”.
+
+
+
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Human{
+private:
+    int age;
+    string name;
+    friend void displayDetails(const Human& h);   // this indicates to the compiler that this function in global scope be permitted special access to the private members of class Human 
+public:
+    Human(int a, string n):age(a),name(n){};
+};
+
+void displayDetails(const Human& h){
+    cout << "Age is " << h.age << endl;
+    cout << "name is " << h.name << endl;    
+}
+
+int main(){
+    Human h1 {15, "baby"};
+    displayDetails(h1);
+    return 0;
+}
+
+Like functions, external classes can also be designed as a trusted friend:
+
+using namespace std;
+
+class Human{
+private:
+    int age;
+    string name;
+    friend class Utility;
+public:
+    Human(int a, string n):age(a),name(n){};
+};
+
+Class Utility{
+Static void DisplayDetails(const Human& h){
+    cout << "Age is " << h.age << endl;
+    cout << "name is " << h.name << endl;    
+            };
+
+
+There are a great number of online platforms that can help you get started with programming. YouTube is one of the independent and free sources of learning. There are a great of number creators on YouTube posting programming and technical tutorials. Here are the top-rated coding and programming channels on YouTube.
+
+1. freeCodeCamp.org
+The non-profit community on YoTube offers coding and tech learning. The channel provides free videos, articles, coding interview questions, and interacting learning lessons. You can get certification after completion of coding challenges. The Python course for beginners, SQL tutorial, and JavaScript full course are the most popular courses on this channel. freeCodeCamp.org has 1.92 million subscribers.
+
+2. Edureka
+The e-learning platform offers instructor-led courses, webinars, and lectures. It also has a Youtube Channel that hosts most of these courses. The most popular technologies covered by the channel include big data, DevOps, Data Science, Hadoop, Apache Spark, Python, Selenium, Blockchain, Tableau, Artificial Intelligence (AI), AWS, and digital marketing. The YouTube channel has 1.68 million subscribers.
+
+3. ProgrammingKnowledge
+This channel offers fundamental knowledge one arias programming topics. It talks about online programming tutorials, coding strategies, installation of open-source software etc. The topics covered in the vides include Elastic Stack, Python, Android, Flutter, Socket Programming, MongoDB etc.
+
+4. Telusco
+This channel offers free tutorials from beginner to advanced level. The technical topics covered in their videos include Python, Blockchain, Android, JavaScript, Rest API, Kotlin, Scala, Spring Framework, Networking etc. Telusco also offers motivation videos and online sessions with industry experts. The channel has 993,000 subscribers.
+
+5. Intellipaat
+This YouTube channel offers free courses in big data, data science, and artificial intelligence. The video content also helps professionals in making a career decision. Some videos talk about how to assist corporate clients in upskilling their workforce. The channel has 496,000 subscribers.
+
+
+
+ 
+ Condition Variables: condition variable class  is a synchronization primitive that can be used to block a thread or multiple threads at the same time, until another thread both modifies a shared variable(the condition) and notifies the condition variable.
+
+6.	The thread that intends to modify the variable has to:
+a)	Aquire a std::mutex (typically via std::lock_guard)
+b)	Perform modification while the lock is held
+c)	Execute notify_one and notify_all on the std::condition variable.
+7.	Even if the shared variable is atomic, it must be modified under the mutex in order to correctly publish the modification to the waiting thread.
+8.	Any thread that intends to wait on std::condition_variable has to
+
+Methods:
+
+Wait: wait causes the current thread to block until the condition variable is notified or a spurious wakeup occurs, optionally looping until some predicate is satisfied.
+9.	1) Atomically unlocks lock, blocks the current executing thread, and adds it to the list of threads waiting on *this. The thread will be unblocked when notify_all() or notify_one() is executed. It may also be unblocked spuriously. When unblocked, regardless of the reason, lock is reacquired and wait exits. If this function exits via exception, lock is also reacquired. (until C++14)
+10.	2) Equivalent to
+11.	while (!pred()) {
+12.	    wait(lock);
+13.	}
+14.	This overload may be used to ignore spurious awakenings while waiting for a specific condition to become true.
+15.	Note that lock must be acquired before entering this method, and it is reacquired after wait(lock) exits, which means that lock can be used to guard access to pred().
+16.	
+Parameters
+lock	-	an object of type std::unique_lock<std::mutex>, which must be locked by the current thread
+pred	-	predicate which returns false if the waiting should be continued.
+The signature of the predicate function should be equivalent to the following:
+Bool::pred
+
+b) Wait_for:   Blocks the current thread until either notify_one or notify_all is executed or relative timeout(rel_timeout) is executed.  It may also be unblocked spuriously. When unblocked, regardless of the reason, lock is reacquired and wait_for() exits. If this function exits via exception, lock is also reacquired.
+/***
+template< class Rep, class Period >
+std::cv_status wait_for( std::unique_lock<std::mutex>& lock,
+const std::chrono::duration<Rep, Period>& rel_time);
+*****/
+
+std::ref, std::cref:  Definition is in the header  <functional>: Function templates ref and cref are helper functions that generate an object of type std::reference_wrapper, using template argument deduction to determine the template argument of the result.
+template< class T >
+std::reference_wrapper<T> ref(T& t) noexcept;
+
+
+
+
+
+
+
+
+
+
+Parameters
+t	-	lvalue reference to object that needs to be wrapped or an instance of std::reference_wrapper
+
+Return value
+1) std::reference_wrapper<T>(t)
+2) std::ref(t.get())
+4) std::reference_wrapper<const T>(t)
+5) std::cref(t.get())
+
+
+std::function:  header is <functional> and   Class template std::function is a general-purpose polymorphic function wrapper. Instances of std::function can store, copy, and invoke any Callable target -- functions, lambda expressions, bind expressions, or other function objects, as well as pointers to member functions and pointers to data members.
+
+
+
+
+Std::StringStream:   It’s a Stream class to operate on Strings.
+ 
+Objects this class use a string buffer that contains a sequence of characters. The sequence of characters can be accessed directly as a String object or using a member str.
+ 
+Characters can be inserted and/or extracted from stream using any operation allowed on the both input and output streams.
+ 
+Apart from the internal string buffer, objects of these classes keep a set of internal fields inherited from ios_base, iosand istream:
+ 
+ 
+ 
+Input and Output Operations in C++:
+ 
+ 
+  Base                                              Derived
+ 
+ 
+ 
+ 
+Streams: (Files, Streams, I/O)
+ 
+ 
+1.	Stream is a sequence of bytes. I/p steam provides data to the stream, O/P stream receives the dat from the stream.
+2.	C++ uses streams as an interface b/w the program and input and output devices.
+ 3)    Independent of actual device.
+ 
+ Common header files:
+ 
+1.	 iostream -->provides definitions for formatted input and output from i/o streams.
+2.	 fstream --> provides definitions for formatted inptu and output from the file i/o steams.
+3.	Iomanip --> provides definitions for the manipulators used to format stream i/o.
+ 
+After including the above headers we have access to many c++  stream classes :
+ 
+Class                                                                   details
+ 
+Ios : provides support for both formatted and unformatted i/o operations.
+        Base class for most of the other classes
+ 
+Ifstream: provides for highlevel input operations on the file based streams.
+ 
+Ofstream: provides for highlevel output operations on the file based streams.
+ 
+Fstream: provides for high-level i/o operations on the file based streams. Derived from the ifstream and ofstream
+ 
+Stringstream: provides for high-level i/o operations on memory based strings . Derived from istringstream and ostringstream.
+ 
+Cin -- standard Input stream, by default its connected to the standard input device(keyboard). Instance of istream class.
+Cout -- standard output stream, by default its connected to the standard output device(console). Instance of ostream class.
+ 
+Both cin and cout are buffered steams . i.e unless user presses enter , i/p wont be considered, for ouput ,user either has to provide newline or flushes the output.
+ 
+Clog and cerr: Both are connected to the default standard error/log device (console). Cerr is instance of ostream(unbuffered)
+Clog is also instance of ostream class(unbuffered).
+ 
+Explore: Redirecting i/o.
+ 
+Stream Manipulators( iomanip):
+ 
+1.	Streams have many useful member functions to control formatting.
+2.	Common stream manipulators:
+  
+ a) Boolean : boolalpha, noboolalpha.
+ b) Integer: dec,hex,oct, showbase, noshowbase, showpos, noshowpos, uppercase, nouppercase.
+ c) Floating point: fixed, scientific, setprecision, showpoint, noshowpoint, showpos, noshowpos.
+ d) Field Width, justification and fill: setw, left, right, internal, setfill.
+ e) Others: endl, flush, skipws, noskipws, ws(whitespace).
+ 
+Formatted integer types:
+ 
+Default: 
+ a) decimal (base 10)
+ b) noshowbase: prefix used to show hexadecimal or octal.
+ c) nouppercase: when displaying a prefix and hex values it will be lower case.
+ d) noshowpos:  no "+" is displayed for +ve integers.
+ 
+Floating point formatters:
+ 
+Default:
+ a) setprecision: no. of digits displayed are controlled to 6.
+ b) fixed: not fixed to a specific no. of digits after the decimal.
+ c) noshowpoint: -- trailing zeros are not displayed.
+d.	Nouppercase: when displaying in a scientific notation.
+e.	Noshowpos: no "+" is displayed for +ve integers.
+ 
+Stream Manipulators -- align and fill:
+ 
+Default:
+ 
+ setw -- not set by default.
+ left -- when no field width, right -- when using field width
+ fill -- not set by default -- blank space is used.
+ 
+Some of these manipulators affect only the next data element put on the stream.
+ 
+ 
+Setw, std::right(default is right justified), std::left
+ 
+-> if setw is done without any justificatoin, its right justified.
+--> for left justification: , do like this setw(10) << std::left << "printnumber" << endl
+--> setfill('*');
+ 
+Note: if we use setfill first and then use the setw, then default alignment goes to the left
+ 
+ 
+Reading data from a text file:
+ 
+Input files: fstream or ifstream classes are used for input files:
+ 
+Header , #include  <fstream>
+ 
+1.	Define the steam object.
+2.	Connect/open to the file on your file system(opens for reading)
+3.	Read data from the file via the stream.
+4.	Close the stream 
+Modes of opening file:
+ 
+Std::ios::in (input mode) -- cannot write here
+Std::ios::binary (binary mode) -- for non text files
+ 
+Ex: fstream fi {"../shankar.txt", std::ios::in};
+      fstream fi {"../shankar.txt", std::ios::in | std::ios::binary};
+ 
+Opening file in reading mode:
+Std::ifstream in_file;
+Std::string filename;
+Cin >> filename;
+In_file.open(filename) or in_file.open(filename, std::ios::binary);
+ 
+To check whether file opened successfully or not:
+ 
+If(In_file.is_open()){ Or We can check like  if(in_file)
+//read from the file
+}else{
+//error in reading the file
+}
+ 
+Reading lines from the file
+String line;
+Infile >> line;
+//reading 2lines at at time
+(while(Infile >> line1 >> line2))
+ 
+Each line at a time
+While(getline(infile,line))
+ 
+In_file.close();
+ 
+//Closing the file stream is very important especially for the files which are opened for writing to flush out unwritten data
+ 
+Writing the data to files:
+ 
+-> fstream and ofstream are commonly used for output files.
+Steps
+ 
+A.	#include <fstream>
+B.	Declare a fstream or an ofstream object.
+C.	Connect to the file on your file system.
+D.	Write data to the file via stream.
+E.	Close the stream.
+F.	By default C++ creates a file, if it doesnot exist.
+G.	Write using a binary or text mode
+H.	Open the file in below ways:
+ 
+i.	Std::fstream outst  {"output.txt" , std::ios::out}  Or { "output.txt} //here  ios::out means opening the file in the output mode.
+//here both declarations are same.
+ 
+ii.	Std::ofstream outst {"output.txt" , std::ios::out | ios::binary};
+ 
+          std::ofstream outst {"output.txt", std::ios::trunc}  //Truncate or(discard contents) when opening the file.
+          std::ofstream outst {"output.txt", std::ios::app}  // append on each write
+          std::ofstream outst {"output.txt", std::ios::ate}  // seek to end of stream when opening
+ 
+           *****Writing to the files****** Use operator  "<<"
+ 
+ 
+StringStream:
+ 
+Using streams, we can read and write to the streams.
+ 
+There are 3 classes: stringstream(read & write from stringstreams)
+Istringstream(read from stringstream)
+Ostringstream(write to the stringstream)
+ 
+1.	Header is, #include <sstream>
+2.	Decleare an stringstream, istringstream, ostringstream object.
+3.	Connect it to a std::string
+4.	Read/Write data from/to the string stream using the formatted I/O.
+ 
+Reading from a stringstream
+/*********
+#include <sstream>
+ 
+Int num {};
+Double total {};
+Std::string name {};
+Std::string info {"Moe 100 1234.5"};
+ 
+Std::istringstream iss{info};
+ 
+Iss >> name >> num >> total;
+ 
+****************/
+ 
+#include <sstream>
+ 
+Int num {100};
+Std::string name {"shankar"};
+Double d {1234.5};
+ 
+Std::ostringstream oss {};
+Oss << name << " " << num << " " << total;
+Std::cout << oss.str() << std::endl;//converting to a string
+ 
+ 
+ 
+Example 2: function chaining calls using this pointer
+Another example of using this pointer is to return the reference of current object so that you can chain function calls, this way you can call all the functions for the current object in one go. Another important point to note in this program is that I have incremented the value of object’s num in the second function and you can see in the output that it actually incremented the value that we have set in the first function call. This shows that the chaining is sequential and the changes made to the object’s data members retains for further chaining calls.
+#include <iostream>
+using namespace std;
+class Demo {
+private:
+  int num;
+  char ch;
+public:
+  Demo &setNum(int num){
+    this->num =num;
+    return *this;
+  }
+  Demo &setCh(char ch){
+    this->num++;
+    this->ch =ch;
+    return *this;
+  }
+  void displayMyValues(){
+    cout<<num<<endl;
+    cout<<ch;
+  }
+};
+int main(){
+  Demo obj;
+  //Chaining calls
+  obj.setNum(100).setCh('A');
+  obj.displayMyValues();
+  return 0;
+}
+ 
+ 
+Unary Operators as Global Functions :
+ 
+Returntype operatorOp(Type &obj)
+ 
+Number operator-(const Number &n);
+Number operator++(Number &obj) // pre-increment
+Number operator++(Number &obj, int) // Post-increment
+Bool operator!(const Number& obj);
+ 
+ 
+Number n1{100};
+Number n2 = -n1;
+ 
+N2 = ++n1;
+N2 = n1++;
+ 
+These methods will be accessed using the friend functions.
+ 
+//In Case of Binary operator overloading, there will be 2 args passed to the function
+(binary Operators as global functions)
+ 
+Number operator+(const &Number lhs, const &Number rhs);
+Number operator-(const &Number lhs, const &Number rhs);
+Number operator==(const &Number lhs, const &Number rhs);
+Number operator<(const &Number lhs, const &Number rhs);
+ 
+Number n1 {100}, n2 {200};
+Number n3 = n1+n2;
+N3 = n1 -n2;
+ 
+If( n1 == n2) …
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+                   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+            
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Pointers:
+ 
+1.	Pointer is a variable whose value is an address. That address can be address of  a variable or function. 
+2.	Inside functions , pointers can be used to access data that are defined outside the function, those variables may not be in the scope , you cannot access them by their name.
+3.	Pointers can be used to operate on arrays very efficiently.
+4.	We can allocate memory dynamically on a heap or free store, that memory does not even have a variable name. The only way to get them is via pointer.
+5.	With OO. Pointers are how polymorphism works.
+6.	Can access specific addresses in memory, useful in embedded and system applications.
+ 
+Pointer Declaration and Initialization:
+ 
+a.	Int *data; (integer pointer)
+b.	Double*    d; (double pointer)
+c.	String  *str1 (pointer to a string object)
+d.	Char *char (character pointer)  
+/
+An uninitialized pointer may point to any where(or any address). Initializing pointer:
+   
+a.	Int  *int_ptr {}; //It will not point to anywhere
+b.	double   *d  {nullptr};
+c.	char *ch {nullptr};
+ 
+Best Practices:
+ 
+1.	Always initialize pointers.
+2.	Uninitialized pointers contain garbage data  and can point to anywhere.
+3.	Initializing to zero or nullptr (c++11) represents address zero.
+ 
+Ex:
+ 
+/************************************/
+int *p;
+cout << "the value of p " << p << endl;  // 06xxxxfyz (garbage) as it’s a uninitialized pointers.
+cout << "the address of p" << &p << endl  // 0x6abcde 
+cout << "the size of p is" << sizeof p << endl; 4
+p = nullptr
+cout << "the value of p is: " << p << endl;   // 0
+ 
+ 
+ 
+/********************/
+ 
+Size of a pointer varialbe or sizeof of what it pointers are both are different. So all addresses have the same size. 
+ 
+ 
+  cout << "the size of the int pointer " << sizeof p << endl; //8
+  cout << "the size of the double pointer " << sizeof d << endl;
+  cout << "the size of the char  pointer " << sizeof ch << endl;
+ 
+  cout << "the size of the addr int pointer " << sizeof &p << endl; //8
+  cout << "the size of the addr double pointer " << sizeof &d << endl;
+  cout << "the size of the addr  char  pointer " << sizeof &ch << endl;
+ 
+  cout << "the size of the int pointer " << sizeof *p << endl; //4 
+  cout << "the size of the double pointer " << sizeof *d << endl; //1
+  cout << "the size of the char  pointer " << sizeof *ch << endl; //1
+ 
+ 
+/*******************************************************/
+ 
+int  ab {10};
+double d {20.0};
+int cd {100};
+ 
+int *ptr;
+ptr = &ab; //compiler works.
+ 
+ptr = &d; // Compilation errors, you are trying to point to address which is of double.
+ 
+ptr = &cd //It works.
+ 
+/************************************************************/
+Dereferencing the pointer: (*)
+ 
+int ab {10};
+int *ab_ptr {&ab};
+ 
+cout << ab << endl; //10
+cout << *ab_ptr << endl;  //10
+ 
+*ab_ptr = 20;
+ 
+cout << ab << endl; //20
+cout << *ab_ptr << endl;  //20
+ 
+/************************************************************/
+ 
+string str1 = "shankar";
+string *str_ptr  {&str1};
+ 
+cout << *str_ptr << endl ; //shankar
+ 
+str1 = "madhavi";
+ 
+cout << *str_ptr << endl ; //madhavi
+ 
+ 
+ 
+Bubble Sort ( In each swap the biggest element will be pushed to the end) (It moves to the highest element to the right most corner on each pass).
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+ 
+Example:
+First Pass:
+( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
+( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them.
+Second Pass:
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 )
+( 1 4 2 5 8 ) –> ( 1 2 4 5 8 ), Swap since 4 > 2
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 )
+Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted.
+Third Pass:
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+ 
+From <https://www.geeksforgeeks.org/bubble-sort/> 
+ 
+Good Links for tutorial:
+ 
+https://thispointer.com/c11-move-contsructor-rvalue-references/
+https://stackoverflow.com/questions/36568377/stdvector-memory-handling?noredirect=1&lq=1
+ 
+https://slideplayer.com/slide/4271342/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+		
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Sorting Techniques:
+
+1.	Selection Sort:  The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array
+
+1.	A Sorted subarray
+2.	Remaining array which is unsorted.
+3.	In each iteration the minimum element is moved to the left or beginning of the array.
+
+Stable Selection Sort: A sorting algorithm is said to be stable if two objects with equal or same keys appear in the same order in sorted output as they appear in the input array to be sorted.
+
+Selection sort works by finding the minimum element and then inserting it in its correct position by swapping with the element which is in the position of this minimum element. This is what makes it unstable.
+
+Swapping might impact in pushing a key(let’s say A) to a position greater than the key(let’s say B) which are equal keys. which makes them out of desired order.
+
+To make selection sort as stable:
+
+Example: 4A 5 3 2 4B 1
+         First minimum element is 1, now instead
+         of swapping. Insert 1 in its correct place 
+         and pushing every element one step forward
+         i.e forward pushing.
+         1 4A 5 3 2 4B
+         Next minimum is 2 :
+         1 2 4A 5 3 4B
+         Next minimum is 3 :
+         1 2 3 4A 5 4B
+         Repeat the steps until array is sorted.
+         1 2 3 4A 4B 5
+/******
+    for(int i= 0; i<n-1 ; i++){
+        int min = i;
+        for(int j= i+1;j<n;j++){
+
+            if(a[min] > a[j]){
+                min = j;
+            }
+        }
+        int key  = a[min];
+
+        while (min > i)
+        {
+                   a[min] = a[min - 1];
+                   min--;
+       }
+        a[i] = key; }.  ******/
+
+Time Complexity: O(n2) as there are two nested loops.
+Auxiliary Space: O(1)
+The good thing about selection sort is it never makes more than O(n) swaps and can be useful when memory write is a costly operation.
+Exercise :
+Sort an array of strings using Selection Sort
+Stability : The default implementation is not stable. However it can be made stable. Please see stable selection sort for details.
+
+Bubble Sort
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+Rule is: In each iteration, the highest value is pushed to the end of the array:
+Example:
+First Pass:
+( 5 1 4 2 8 ) –> ( 1 5 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1.
+( 1 5 4 2 8 ) –>  ( 1 4 5 2 8 ), Swap since 5 > 4
+( 1 4 5 2 8 ) –>  ( 1 4 2 5 8 ), Swap since 5 > 2
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 ), Now, since these elements are already in order (8 > 5), algorithm does not swap them.
+Second Pass:
+( 1 4 2 5 8 ) –> ( 1 4 2 5 8 )
+( 1 4 2 5 8 ) –> ( 1 2 4 5 8 ), Swap since 4 > 2
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –>  ( 1 2 4 5 8 )
+Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted.
+Third Pass:
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
+
+for(int i= 0;i<n-1;i++){
+        for(int j=0;j<n-i-1;j++){
+            if(a[j] > a[j+1])
+                interchange(a[j], a[j+1]);
+        }
+        
+        cout << "After each pass: " << i << endl;
+       /* for (int i= 0;i<n;i++){
+            cout << a[i] << " ";
+        } */
+        
+    }
+
+Worst and Average Case Time Complexity: O(n*n). Worst case occurs when array is reverse sorted.
+Best Case Time Complexity: O(n). Best case occurs when array is already sorted.
+Auxiliary Space: O(1)
+Boundary Cases: Bubble sort takes minimum time (Order of n) when elements are already sorted.
+Sorting In Place: Yes
+Stable: Yes
+
+Due to its simplicity, bubble sort is often used to introduce the concept of a sorting algorithm.
+In computer graphics it is popular for its capability to detect a very small error (like swap of just two elements) in almost-sorted arrays and fix it with just linear complexity (2n). For example, it is used in a polygon filling algorithm, where bounding lines are sorted by their x coordinate at a specific scan line (a line parallel to x axis) and with incrementing y their order changes (two elements are swapped) only at intersections of two lines (Source: Wikipedia)
+
+Insertion Sort: 
+Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+
+Here are also in every swap , we will ensure that min key value is pushed to the left/beginning, and importantly remaining keys will be shifted.
+
+Example:
+ 
+
+
+
+          
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+          
+ 
+ 
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+

@@ -1,0 +1,534 @@
+APT Commands:
+	
+	1) Sudo apt install <packagename>
+	2) Sudo apt purge/remove <packagename>
+	3) Sudo apt list --installed  OR  To check installed package information.
+   4)    sudo apt-cache search  <package name>// Search the information stored in  internal database of the apt  which is collected from the sources.list file(/etc/apt/sources.list)
+	1) Sudo apt-key add/delete filename //used to manage list of keys  used by apt to authenticate packages, packages which have been authenticated using this keys are considered trusted.
+	2) Sudo apt-get update  //To update the list of the available packages and their versions, it does not install or upgrade the packages.
+	3) Sudo apt upgrade // install newer versions of packages, after updating the lists, the package manager knows about the available updates for the s/ws you installed.
+	4) Sudo dpkg -I <dpkpackagename.deb> //To install a debian package.
+	5) Sudo dist-upgrade //Wont upgrade to the new ubuntu OS, but will upgrade to a new Kernel version OR to a different set of dependencies.
+	It will install the new packages and upgrade all the available packages.
+ 10)    sudo apt install curl // sudo apt update is necessary before doing this.
+
+	11) Cat /proc/meminfo to check the RAM usage.
+	12) Cat /proc/cpuinfo  to check no. of cpu cores or processors.
+	13) Create a group called docker:  < sudo groupadd  "<groupname>"
+	14) DNS Entries can be added or hardcoded (as a work around) to /et
+
+System CTL: sysctl command is used to probe the "Kernel information" and modify the information.
+
+	15) sysctl -a
+           Sysctl -p(will print all the loaded parameters in the system).
+           vi /etc/sysctl.conf (System CTL default configuration)
+           Once it is changed to load those parameters, type : "sysctl -p"(To change paramerts during Run time) (Ths value persists during the reboot also)
+           -> To change temporarily
+
+           Other way to change it, go to /proc/, particular directory, 
+
+	16) DAD Protocol(Duplicate Address Detection Protocol) : 
+	There are four IPv6 address states: tentative, deprecated, preferred, and unavailable. When an IPv6 address is added it remains in the tentative state while duplicate address detection (DAD) is performed, after which it becomes preferred.
+	
+	If your network startup fails with "RTNETLINK answers: File exists" trying to bring up the IPv6 gateway, it can be because a gateway has already been brought up by Neighbourhood Discovery (RA).
+	The fix appears to be to either:
+		a. configure net.ipv6.conf.eth0.accept_ra=0 using sysctl (replace 'eth0' as necessary);
+		b. comment out the relevant inet6 "gateway" line from /etc/network/interfaces; or
+		c. place inet6 configuration before inet in /etc/network/interfaces;
+	
+
+
+
+
+
+kubectl patch configmap/ssd-proxy-default-vcl --patch "$(cat vcl_new.yaml)"
+
+	14) Check the file sizes in MB:
+	ls -lrt --block-size=M
+	
+	
+Useful commands In Linux:
+
+	1) grep  -c (lower alpha 'c' gives the count of matching lines),  -C (Upper alpha 'c' gives the context meaning before and after or Around the matching pattern, it will print the lines.
+
+          Usage:   grep -C 2 "unix" file.txt   or grep --context=6 successful logfile
+
+
+    2) egrep (Extended grep) (Search for multiple patterns using a regular expression).
+
+        Usage:  egrep 'Error|Exception' logfile.txt
+
+
+
+   3) Search for patterns in the gzip files,  usage command 'zgrep'
+
+   4) Search whole word in a file using grep, Use   '-w'  
+
+      Ex: grep -w Error logfile.txt,  it searches only instances of the 'ERROR'  that are entire words, it does match 'sysERROR'
+
+      for more control, use '\<' and '\>' to match start and end of the words.
+
+	5) Use "!!" for executing the last command.
+
+  6) Using aliases and defining them in the bash profile or bashrc profile.
+
+      The files are .bashrc or .profile file.
+
+
+
+
+   
+
+
+	
+	
+
+ 
+Networking Commands:
+
+	1) Ip r s (To show list of the IPV4 routes)
+	
+	2) Ip -6 r s(To show list of IPV6 routes)
+	
+	3) Route -n (To see routing table)
+	
+	4) Route -6  -n(ipv6 routing table information)
+	5) ip link show  or ifconfig (To show list of the interfaces).
+	6) ip link set dev eth0 mtu <value> or ifconfig etho mtu  <value>
+	7) sudo arping -i eth1 -S 10.0.5.55(sourceip of the machine) -c 1 10.0.5.254 (gateway).
+	8) Ip add route <ip>   default   via  <gateway>
+	9)  service network restart (for restarting the n/w restart command)
+	10) Netstat -lpt (to show list of the open ports and connection types).
+	11) ip route add default via 192.168.1.254 //ip command to set a default router to 192.168.1.254 ( show / manipulate routing, devices, policy routing and tunnels)
+	12) route add default gw 192.168.1.254 //route command to set a default router to 192.168.1.254 (
+	 show / manipulate the IP routing table
+	13)  Nslookup //(To check whether dns resolution is working or not)
+	14) Telnet <ip> <portno> (To check the connectivity to a particular port).
+	15) Tcpdump ---vvv -I <interface> -p <portno>
+	16) Nmap <ip:port>
+	17) Curl -vk --ca-cert    < *.crtfile>  --keyfile     <*.keyfile>    <URL> (K for insecure, it will ignore the the certs provided).
+	18) Tcpdump -vvv -i  <interface name>  src  <sourceip> dest <destination ip> port <portno> -w <wireshark.pcap>
+	19) Rsync (Remote Sync) is a most commonly used command for copying and synchronizing files and directories remotely as well as locally in Linux/Unix systems.
+	 
+	 a)  apt-get install rsync
+	 b) rsync -avzh /root/rpmpkgs /tmp/backups/
+	 c) rsync -avz rpmpkgs/ root@192.168.0.101:/home/ //syching the files across the servers.
+
+	1) Ip -6 addr add default   <IPV6>  dev <interface> //Adding an IPV6 address to an interface.
+	20) Ip -6 route add default via  <gateway> dev <interfacename>
+
+	21) Truncate -s 0 <filename>  //Shrink or Extend the size of file
+
+	22) service rsyslog start (Enabling  syslog on dhcp server, o r any linux machine).
+	23)  wget <ip>:<port>
+	24) xxd creates a hex dump of a given file or standard input"
+	
+	#a=`xxd -p Comcast_D31_CVC_Cert_150903re-issued.509 | tr -d '\n'`
+	#echo $a 
+	
+	<tr> command translates the characters or special characters
+	
+	 
+	
+	
+	25) RysLogs information:
+	
+	The rsyslog daemon gets its configuration information from the rsyslog.conf file. The file is located under the /etc directory.
+	Basically, the rsyslog.conf file tells the rsyslog daemon where to save its log messages. This instruction comes from a series of two-part lines within the file.
+	This file can be found at rsyslog.d/50-default.conf on ubuntu.
+	The two part instruction is made up of a selector and an action. The two parts are separated by white space.
+	The selector part specifies what's the source and importance of the log message and the action part says what to do with the message.
+	
+	26) Mellanox Driver restart:
+	sudo /etc/init.d/openibd restart
+	
+	
+	root@isc-dhcp-server-0:/#  mv /usr/sbin/tcpdump /usr/bin/tcpdump
+	root@isc-dhcp-server-0:/# tcpdump -i bond0
+	bash: /usr/sbin/tcpdump: No such file or directory
+	root@isc-dhcp-server-0:/# /usr/bin/tcpdump -I bond0
+	
+	27) sudo tcpdump -vvv -n dst port 53 (Tcpdump with only Ips on destination port:53)
+	
+	
+	
+	
+	
+	
+
+IP Tables Information (Allowing or Disabling the specific ports or connections):
+
+
+# 1. List all the existing rules
+iptables -L
+
+
+# 2. Delete all existing rules
+iptables -F
+# 3. Set default chain policies
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT DROP
+# 4. Allow incoming SSH
+iptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+# 5. Allow incoming HTTP
+iptables -A INPUT -i eth0 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A OUTPUT -o eth0 -p tcp --sport 80 -m state --state ESTABLISHED -j ACCEPT
+# 6. Allow outgoing SSH
+iptables -A OUTPUT -o eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+iptables -A INPUT -i eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+
+Cpu isolation is configured in the below file:
+
+	1) This is done in /etc/default/grub
+	2) This meaning is the isolcpus boot parameter can be used to specify CPUs to be isolated from the general SMP balancing and schedular algorithms.
+	3) Isolating a CPU prevents tasks/processes from being assigned to or from The CPU by the scheduler and therefore assigning processes/tasks to ro from the CPU must be done manually via the taskset, cset commands, or other software utilizing the CPU affinity syscalls.
+
+
+Kubelet Details:
+
+  Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+   Active: active (running) since Fri 2018-03-09 18:59:44 UTC; 5s ago
+     Docs: https://github.com/kubernetes/kubernetes
+ Main PID: 13470 (kubelet)
+    Tasks: 41
+   Memory: 34.8M
+      CPU: 655ms
+   CGroup: /system.slice/kubelet.service
+           ├─13470 /usr/bin/kubelet --hostname-override=10.255.139.82 --api-servers=https://localhost:443 --logtostderr=true --cluster-dns=192.168.3.145 --cluster-domain=CC38-SYS2 --enable_server=true --register-node=true
+           └─13560 journalctl -k -f
+~
+~
+~
+
+-kubectl get pods -l app=vcmts-dispatcher -nppod1-ns1
+ kubectl describe pods vcmts-dispatcher-0 -nppod1-ns1
+ 
+ container name: 
+ 
+ ha-agent4mpod
+ 
+ kubectl exec -it vcmts-dispatcher-0 -c ha-agent4mpod -nppod1-ns1 bash
+ 
+ kubectl logs vcmts-dispatcher-0 -c ha-agent4mpod -nppod1-ns1 bash
+ 
+ 
+ kubectl exec vcmts-cd-0-0 -c mulpi -nppod1-ns1 -- ulc-debug mulpi ShowLccesTopology
+
+kubectl exec pg-1-0 -c mulpi -nppod1-ns1 -- ulc-debug mulpi ShowLccesTopology
+
+Docker commands:
+
+sudo docker save -o /home/matrix/matrix-data.tar matrix-data
+
+sudo docker load -i <path to copied image file>
+l
+
+Checking the flannel configuration in the Kubernetes masters:
+
+	1) etcdctl ls  /coreos.com/network
+	2) Flannel subnet lease information:
+	ubuntu@kube-master-130:~$ etcdctl ls  /coreos.com/network/subnets
+	/coreos.com/network/subnets/10.1.71.0-24
+	/coreos.com/network/subnets/10.1.41.0-24
+	/coreos.com/network/subnets/10.1.16.0-24
+	/coreos.com/network/subnets/10.1.101.0-24
+	
+	3) Sudo etcdctl  get  /coreos.com/network/config
+
+TLS Handshake Steps:
+
+	1) TLS runs over a reliable transport (TCP), which means that we must first complete the TCP three-way handshake, which takes one full roundtrip.
+	
+	2) With the TCP connection in place, the client sends a number of specifications in plain text, such as the version of the TLS protocol it is running, the list of supported ciphersuites, and other TLS options it may want to use.
+	
+	3) The server picks the TLS protocol version for further communication, decides on a ciphersuite from the list provided by the client, attaches its certificate, and sends the response back to the client. Optionally, the server can also send a request for the client’s certificate and parameters for other TLS extensions.
+	
+	4) Assuming both sides are able to negotiate a common version and cipher, and the client is happy with the certificate provided by the server, the client initiates either the RSA or the Diffie-Hellman key exchange, which is used to establish the symmetric key for the ensuing session.
+	
+	
+	5) RSA handshake has been the dominant key exchange mechanism in most TLS deployments: the client generates a symmetric key, encrypts it with the server’s public key, and sends it to the server to use as the symmetric key for the established session. In turn, the server uses its private key to decrypt the sent symmetric key and the key-exchange is complete. From this point forward the client and server use the negotiated symmetric key to encrypt their session
+	
+	6) The server processes the key exchange parameters sent by the client, checks message integrity by verifying the MAC, and returns an encrypted Finished message back to the client.
+	
+	
+	7) The client decrypts the message with the negotiated symmetric key, verifies the MAC, and if all is well, then the tunnel is established and application data can now be sent.
+	
+	
+
+
+
+Screen clipping taken: 2/20/2018 2:33 PM
+
+	1. Log Rotation:
+	The purpose of log rotation is to archive and compress old logs so that they consume less disk space, but are still available for inspection as needed. Wthe logrotate command of course! , logrotate is called from the system-wide cron script /etc/cron.daily/logrotate, and further defined by the configuration file /etc/logrotate.conf. Individual configuration files can be added into /etc/logrotate.d (where the apache2 and mysql configurations are stored for example).
+	
+	Typically, logrotate is called from the system-wide cron script /etc/cron.daily/logrotate, and further defined by the configuration file /etc/logrotate.conf. Individual configuration files can be added into /etc/logrotate.d (where the apache2 and mysql configurations are stored for example).
+	
+         -> crontab -l
+        ->cat /etc/crontab   will have all daily, monthly, yearly cron job details.
+
+
+
+SNMP:
+
+Simple Network Management Protocol (SNMP) is a popular protocol for network management. It is used for collecting information from, and configuring, network devices, such as servers, printers, hubs, switches, and routers on an Internet Protocol (IP) network
+
+SNMP traps are alert messages sent from a remote SNMP-enabled device to a central collector, the "SNMP manager". A trap might tell you that a device is overheating, for example.
+
+SNMP is based on the manager/agent model, consisting of a manager, an agent, a database of management information, managed objects, and the network protocol. The manager provides the interface between the human network manager and the management system. The agent provides the interface between the manager and the physical device(s) being managed.
+The manager and agent use a Management Information Base (MIB) and a relatively small set of commands to exchange information. The MIB is organized in a tree structure with individual variables, such as point status or description, being represented as leaves on the branches. A long numeric tag or object identifier (OID) is used to distinguish each variable uniquely in the MIB and in SNMP messages.
+
+SNMP is very simple, yet powerful.  It has the ability to help you manage your network by:
+	1) Provide Read/Write abilities – for example you could use it to reset passwords remotely, or re-configure IP addresses.
+	2) Collect information on how much bandwidth is being used.
+	3) Collect error reports into a log, useful for troubleshooting and identifying trends.
+	4) Email an alert when your server is low on disk space.
+	5) Monitor your servers’ CPU and Memory use, alert when thresholds are exceeded.
+	6) Page or send an SMS text-message when a device fails.
+	7) Can perform active polling, i.e. Monitoring station asks devices for status every few minutes.
+	8) Passive SNMP – devices can send alerts to a monitoring station on error conditions.
+
+
+SNMP Diagram:
+
+
+
+Ports and Firewalls
+SNMP uses UDP as the transport protocol. If management traffic will traverse firewalls, make sure that the following default ports are open:
+• UDP 161: Used when management stations communicate with agents, e.g. Polling
+• UDP 162: Used when agents send unsolicited Traps to the management statio
+
+OIDs and MIBs
+Two crucial SNMP concepts are OIDs (Object Identifier) and MIBs (Management Information Base).
+SNMP works by querying “Objects”. An object is simply something that we can gather information about on a network device. For instance, an object might be something like Interface Status. Querying Interface Status would return a variable – 
+
+ A MIB is like a translator that helps a Management Station to understand SNMP responses obtained from your network devices.
+
+Some general SNMP terminology that you may come across:
+• Agent: A process that monitors devices for problems and sends alerts to a monitoring station.
+• Community Strings: Like passwords. See earlier in this article for more information.
+• Get: SNMP sends a get request to device it monitors to retrieve specific information.
+• Get Next: A getnext command is used by SNMP to get the next variable in a set – for instance in a table.
+• Informs: Like Traps, but sent by the agent with a request for the management station to confirm receipt. Supported in v2 and up.
+• Management Station (aka Network Management Station or NMS): The software configured to receive and collect information sent from SNMP agents.
+• MIB: Management Information Base. • MIB Browser (or MIB Walker): A tool that can pull data from SNMP enabled devices, helping to identify which objects respond to a query.
+• Notification: Same as a “Trap”. V2c and up use the term Notifications to refer to a Trap.
+• OID: Object Identifier. See the beginning of this article for more information on OIDs.
+• Object: The things SNMP gathers information about. Examples are Interface status, or CPU utilization.
+• Polling: An NMS will poll, or ask devices for their status regularly.
+• Set: SNMP can use a Set command to change settings on a device.
+• Trap: SNMP sends a trap, or unsolicited message sent from an agent to a management station when some important event is detected. This is the opposite of polling.
+• Variable: Variables are the actual status of an object – up/down, 90% CPU used, etc.
+• Version 1: Original version of SNMP, community strings sent in plain text, very weak security.
+• Version 2c: SNMP v2c was developed to fix some of the problems in v1. However multiple versions were developed, none truly addressing the problems with v1. V2c is the most common flavour, and has enhanced protocol handling over v1, resulting in slightly improved operations. However, security is still an issue because it uses plain-text community strings.
+• Version 3: The newest version of SNMP, v3 supports full security and authentication. Should be used if possible, especially on untrusted networks.
+
+
+
+Docker commands:
+
+
+	1) Running a docker container in detached mode with port of host and container mapping to each other
+
+   sudo docker run -it -d=true -p 8190:8190   96.115.240.58:8089/projects/gcpp/gcpp:2.0.41.17
+
+	2) Generating .tar file out of the docker image
+           sudo docker save -o imagename.tar  Image:tag
+
+   3)  Untar a docker file:
+
+         sudo docker load -i dockerimage.tar
+
+  4) sudo docker rmi <dockerimage:tag>
+
+
+ 
+PTP Info:
+
+This page explains how PTP works on CableOS Core. 
+In CableOS PTP is implemented in two places: in mulpi and DataPath. Mulpi is responsible for configuration and unicast negotiation logic, DataPath communicates with GM and does PTP related calculations (servo mechanism).
+Currently two PTP modes are supported: multicast and unicast negotiation. They can be configured from CLI.
+
+PTP networking
+By default Core uses DSI network for PTP communication. It sends packets from first available LCCE interface, there is no deterministic algorithm which chooses specific interface. Communication via DSI has one disadvantage - slave nodes have not active LCCE interfaces. As the result slaves are unsynchronized to GM. To overcome this issue we implemented PTP communication over NSI.prov
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mount -t glusterfs {{ groups[['glusterfs',PPOD_name,namespace,'server']|join('_')][0] }}:gluster_volume-{{item}}-{{PPOD_name_namespace}} /opt/data/{{item}
+
+
+mount  -t glusterfs 10.250.17.108:gluster_volume-config-ppod1-ns1  /opt/data/config
+
+gluster volume status all
+
+umount -l /opt/data/{{ item }}
+
+
+From <https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/sect-User_Guide-Monitor_Workload-Displaying_Volume_Status.html> 
+
+https://access.redhat.com/documentation/en-US/Red_Hat_Storage/2.0/html/Administration_Guide/sect-User_Guide-Monitor_Workload-Displaying_Volume_Status.html
+
+
+- name: glusterfs Installation
+  hosts: glusterfs_{{PPOD_name}}_{{namespace}}_server
+  roles:
+    - install_glusterfs
+
+- name: glusterfs peer probe
+  hosts: glusterfs_{{PPOD_name}}_{{namespace}}_server
+  roles:
+    - role: install_glusterfs_ppod_peer_probe
+
+- name: glusterfs client Installation:
+  hosts: glusterfs_{{PPOD_name}}_{{namespace}}_clients
+  roles:
+    - install_glusterfs_ppod_client_new
+
+- name: glusterfs services Installation
+  hosts: kubernetes_ha_masters
+  roles:
+    - install_glusterfs_ppod_kubernetes_services
+
+
+Mellanox Drivers info:
+
+• High performance single/Dual port support with full line rate, full duplex 10Gbps, 40Gbps and 56Gbps per port
+• High scale SR-IOV with 126 Virtual Functions (VFs) (Single root input, output Virtualization)
+• VXLAN hardware offload (ConnectX-3 Pro) --Need to figure out
+• TCP/IP stateless offload, and Hardware Checksum Offload for Tx and Rx packets
+• Net device statistics per port with both ports in active mode
+• Extensive VLAN support with VLAN Tx/Rx acceleration (Hardware VLAN stripping/insertion), Hardware VLAN filtering and Hardware multicast filtering
+• Adaptive Interrupt moderation on the receive path patterned according to either latency-bound traffic or bandwidth bound traffic.
+• Default NAPI support is enabled per-core to run in interrupt mode (Need to figure out)
+• Performance optimization support with "ethtool" command; Allows tuning of various NIC driver optionsUse fewer high-performance systems in a rack based system, reducing cabling, low power consumption
+• Supports all major Linux Distributions
+• Supports KVM and XenServer
+
+
+
+CISCO RPD Commands:
+
+	1) Login with admin & admin as id & pwd. Then give letter "d", then give "enable".
+
+  2)  show dhcp, show prov all(will give the rpd state details). <show ptp clock 0>, set reboot hold, clear reboot hold and reboot.
+
+
+kubectl get workloads -nppod1-ns1 -oyaml | grep -B 3  rphyMac
+
+
+Resetrpd through matchmaker:
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"00:20:a3:24:92:a2","PROVISION":"false" }'  http://localhost:8484/resetRpd  -v
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"B0:26:80:FB:D3:C0","PROVISION":"false" }'  http://localhost:8484/resetRpd  -v
+
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"B0:26:80:FB:D3:C0","PROVISION":"false" }'  http://localhost:8484/resetRpd  -v
+
+
+curl -k -v -d '{ "MAC_ADDRESS" : "00:20:a3:24:92:d2" }' -H "Content-Type: application/json" http://:8484/resetRpd
+
+kubectl get cm -nppod1-ns1 matchmaker-configmap -o json > /tmp/mm.json
+
+vi /tmp/mm.json
+
+kubectl replace -f /tmp/mm.json
+
+kubectl delete pods matchmaker-0 -nppod1-ns1
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"00:20:a3:24:92:d2","PROVISION":"false" }'  http://localhost:8484/resetRpd -v
+
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"00:27:90:0A:BC:18","PROVISION":"false" }'  http://localhost:8484/resetRpd  -v
+
+
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"00:20:a3:24:92:a2","PROVISION":"false" }'  http://localhost:8484/resetRpd -v
+
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"0020a32492a2","PROVISION":"false" }'  http://localhost:8484/resetRpd -v
+
+
+https://gcpp-configman-pprd.tbbo-comcast.com/gcpp/getUpdatedRPDConfig?rpdMacAddress=00:20:a3:24:92:a2
+
+
+
+curl --header "Content-Type: application/json" --data '{"SWITCH_ID":"1","PORT":"0","MAC_ADDRESS":"00:90:f0:0f:04:cb","PROVISION":"false" }'  http://localhost:8484/resetRpd  -v
+
+
+0090f00f04cb
+
+
+
+curl -v --cacert  ca_gcpp.pem  --cert client_gcpp.crt --key client_gcpp.key  https://gcpp-configman-pprd.tbbo-comcast.com/gcpp/getUpdatedRPDConfig?rpdMacAddress=00:20:a3:24:92:a2
+
+
+curl -v --cacert  ca_gcpp.pem  --cert client_gcpp.crt --key client_gcpp.key  https://gcpp-configman-pprd.tbbo-comcast.com/gcpp/getRPDConfig?rpdMacAddress=f4:db:e6:b4:d3:c2
+
+
+curl -v --cacert  ca_gcpp.pem  --cert client_gcpp.crt --key client_gcpp.key  https://gcpp-configman-pprd.tbbo-comcast.com/gcpp/getRPDConfig?rpdMacAddress=00:20:a3:24:92:a2
+
+
+From <https://preprod-grafana-new-01.tb-comcast.com/d/PxRerUgRs/gcpp-rpd-summary-prometheus-recording-rule?refresh=30s&orgId=1&var-site_name=BG02&var-PPOD=NJLEPP001> 
+
+
+
+From <https://preprod-grafana-new-01.tb-comcast.com/d/PxRerUgRs/gcpp-rpd-summary-prometheus-recording-rule?refresh=30s&orgId=1> 
+
+
+
+DOS Attack: Denial of Service 
+
+ A distributed denial-of-service (DDoS) attack occurs when multiple systems flood the bandwidth or resources of a targeted system, usually one or more web servers. Such an attack is often the result of multiple compromised systems (for example, a botnet) flooding the targeted system with traffic.
+
+
+NOTE: a cyber-attack in which the perpetrator seeks to make a machine or network resource unavailable to its intended users by temporarily or indefinitely disrupting services of a host connected to the Internet. Denial of service is typically accomplished by flooding the targeted machine or resource with superfluous requests in an attempt to overload systems and prevent some or all legitimate requests from being fulfilled.
+
+Client Certificate:  It is used to authenticate the client
+
+
+Commands for adding or deleting the CMK pods:
+
+ansible-playbook -s -i inventory -e "" -e "namespace=ns1" plays/install_kubernetes_ha_ppod.yml --tags add_node_services
+
+
+
+Rebuild Script:
+
+bash unpause_onos.sh ppod1 ; python rebuild_it.py --onos_dead --multicastdownonly --nomatchmaker --nomonitoringprobe --noselfheal ppod1-ns1 ; bash pause_onos.sh ppod1
+
+
+GDB Command:
+
+
+Shell variables:
+
+$0 //filename , $1 is 1st Arg.., $# total no. of args, $@ (all args from $1 to … till end), $* is almost same as the $@, but $* ignore if there are any white spaces in b/w the , $? Exit 
+
+
+
+
+
+
