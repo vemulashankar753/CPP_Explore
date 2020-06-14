@@ -166,6 +166,16 @@ Enum Colors {
 }
 
 
+Why do we use references: 
+
+a)	To modify the local variables of the caller function: A reference (or pointer) allows called function to modify local variable of the caller function).
+
+b)	For passing large sized arguments: If an argument is large, passing by reference is more efficient because only an address is really passed not the entire object.
+
+c)	To avoid object slicing: If we pass an object of subclass to a function as (that expects an object of super class )argument without the reference or call by value , then object is sliced.
+
+Example:
+d)	To achieve runtime polymorphism 
 
 
 
