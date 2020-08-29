@@ -21,7 +21,7 @@ public:
   C()  { setX(20); } 
 }; 
   
-class D: public C, public B { 
+class D: public B, public C { 
 }; 
   
 int main() 

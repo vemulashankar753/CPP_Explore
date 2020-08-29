@@ -17,7 +17,8 @@ std::queue<int> q;
 int n = 10;
 void printqueue(){
     std::unique_lock<std::mutex> l(m1);
-    cv.wait(l, []{return i == 1;});
+    cv.wait(l);
+//    cv.wait(l, []{return i == 1;});
     cout << "the queue elements are:  " << q.front() << endl;
     q.pop();
 

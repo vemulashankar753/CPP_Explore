@@ -33,10 +33,19 @@ void makeFishSwim(Fish& inputfish){
 
 int main(){
 
+ Fish f;
+ f.swim();
+
  Tuna t;
  t.swim();
 
  makeFishSwim(t);
+
+ Fish *f1 = new Tuna();
+
+ f1->swim(); //As there is no Virtual key word, there is no Dynamic ploymorphism is achieved,
+           // It still calls the Base class swim.
+ delete f1;
 
 }
 

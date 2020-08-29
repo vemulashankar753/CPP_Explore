@@ -6,9 +6,12 @@ using namespace std;
 class A{
 
  public:
+  int i;
   A(){
     cout << "A class def. constrctor is called" << endl;
   }
+
+  virtual print(){};
 };
 
 class B: public A{
@@ -17,6 +20,7 @@ class B: public A{
   B(){
     cout << "B class def. constrctor is called" << endl;
   }
+  
 
 };
 
@@ -24,13 +28,13 @@ class C: public A{
 
   public:
   C(){
-    cout << "B class def. constrctor is called" << endl;
+    cout << "C class def. constrctor is called" << endl;
   }
 
 };
 
 
-class D: public C, B{
+class D: public B, C{
 
   public:
   D(){
