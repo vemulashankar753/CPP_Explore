@@ -1,5 +1,5 @@
 
-//Without using the Virtual key word, when the makeFishSwim  is called, tuna object will remain as fish object
+//Without using the Virtual key word, when the makeFishSwim  is called , tuna object will remain as fish object
 //here when the tuna object is passed as a reference to makeFishSwim, instread of it converts to Tuna, it remains as Fish.
 //If we use Virtual, keyword it will be solved.
 #include <iostream>
