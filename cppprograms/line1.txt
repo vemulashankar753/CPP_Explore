@@ -1,1 +1,0 @@
-{"component":"GCP_SERVICE","domain":"SERVICE_SETUP","file":"gcpservice.cpp","id":4,"level":6,"line":90,"ltime":1526570810.3401029,"macaddr":" ","message":"Accepted RPD connection from 2001:558:ff10:437::cf8:39084","pid":69,"tagname":"GCPP_RPD","threadid":"7f663d7bd780"}
