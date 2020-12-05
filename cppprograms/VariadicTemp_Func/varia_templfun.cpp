@@ -11,7 +11,7 @@ void print()
 { 
     cout << "I am empty function and "
             "I am called at last.\n" ; 
-} 
+}  
   
 // Variadic function Template that takes  
 // variable number of arguments and prints 
@@ -20,8 +20,9 @@ template <typename T, typename... Types>
 void print(T var1, Types... var2) 
 { 
     cout << var1 << endl ; 
+    print(var2...);
   
-    print(var2...) ; 
+  //  print(var2...) ; 
 } 
   
 // Driver code 
