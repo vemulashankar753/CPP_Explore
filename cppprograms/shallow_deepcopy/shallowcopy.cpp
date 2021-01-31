@@ -44,7 +44,8 @@ void printname(Mystr s){
 int main(){
     Mystr n1("shankarvemula");
     printname(n1);
-
+    cout << "===============" << endl;
+//    printname(n1);
 }
 
 /*****

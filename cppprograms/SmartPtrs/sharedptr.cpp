@@ -64,7 +64,9 @@ int main(){
     std::cout  << p3.use_count() << endl;
     
     p1.reset(); // Reset / nulled out the p1, so it p1 use count will be zero
-    
+        
+    cout << "After the p1 reset" << endl;
+
     std::cout  << p1.use_count() << endl;
     std::cout  << p2.use_count() << endl;
     std::cout  << p3.use_count() << endl;
