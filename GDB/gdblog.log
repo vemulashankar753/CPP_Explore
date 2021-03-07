@@ -1,0 +1,28 @@
+Script started on Tue Feb  9 11:08:09 2021
+[?1034hsh-3.2# pwd[K[K[Kpwd
+/Users/svemul200/mylearning/CPP_Explore/GDB
+sh-3.2# gdb e[Ktest -q
+Reading symbols from [32mtest[m...
+Reading symbols from [32m/Users/svemul200/mylearning/CPP_Explore/GDB/test.dSYM/Contents/Resources/DWARF/test[m...
+(gdb) run[K[K
+Starting program: /Users/svemul200/mylearning/CPP_Explore/GDB/test 
+Note: this version of macOS has System Integrity Protection.
+Because `startup-with-shell' is enabled, gdb has worked around this by
+caching a copy of your shell.  The shell used by "run" is now:
+    /Users/svemul200/Library/Caches/gdb/bin/sh
+[New Thread 0x2503 of process 40039]
+
+
+
+
+bt
+
+
+quit
+
+
+
+
+^C^C^C'
+
+

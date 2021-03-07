@@ -1,0 +1,54 @@
+Script started on Tue Feb  9 11:05:27 2021
+[?1034hsh-3.2# gdb test
+[35;1m[35;1mGNU gdb [m[35;1m(GDB) [m[35;1m10.1[m[35;1m
+[m[mCopyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-apple-darwin19.6.0".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32mtest[m...
+Reading symbols from [32m/Users/svemul200/mylearning/CPP_Explore/GDB/test.dSYM/Contents/Resources/DWARF/test[m...
+(gdb) b main
+Breakpoint 1 at [34m0x1000030af[m: file [32mtest.cpp[m, line 10.
+(gdb) run
+Starting program: /Users/svemul200/mylearning/CPP_Explore/GDB/test 
+Note: this version of macOS has System Integrity Protection.
+Because `startup-with-shell' is enabled, gdb has worked around this by
+caching a copy of your shell.  The shell used by "run" is now:
+    /var/root/Library/Caches/gdb/bin/sh
+[New Thread 0x2303 of process 39938]
+
+
+run
+cn ontiun  nue
+
+
+
+
+
+
+^C^C^C^Cexit
+
+
+quit
+
+
+^C^C
+
+
+
+^C^C^C^Cqqq
+
+
+
+
+^C^C^C
